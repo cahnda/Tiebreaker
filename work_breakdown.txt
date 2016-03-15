@@ -1,0 +1,15 @@
+Jack
+MTurk Calls/API
+
+David
+Flask (Python Routing)
+HTML Templates
+
+Parker
+Javascript
+Styling (CSS)
+
+Santi and Alex (you guys can figure out how to split these up between you two)
+Database (Mongo. This means User schema AND Mturk data schema)
+Video
+Stripe Payment
