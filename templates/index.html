@@ -1,9 +1,16 @@
 = extends 'layout.html'
 
+= block head
+<script src="static/js/index.js"></script>
+= endblock
+
 = block title
 	Home
 = endblock
 
 = block body
-<h1> This is the home page </h1>
+<h1> Tiebreaker </h1>
+<form action="./input" method="POST" id="frm">
+	<input type="submit" value="Submit">
+</form>
 = endblock

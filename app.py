@@ -16,12 +16,27 @@ env.globals.update(utils=utils)
 def index():
 	return render_template("index.html")
 
-@app.route ("/request",  methods = ["GET","POST"])
-def reqest():
-	return render_template("request.html")
+@app.route ("/input",  methods = ["GET","POST"])
+def input():
+	if request.method == "GET":
+		print ("get")
+	else: 
+		print("post request")
+		button = request.form['button'] if 'button' in request.form else None
+		print (button)
+		if button == "Submit":
+			session['description'] = request.form.get("description", None)
+			session['option_1'] = request.form.get("option1", None)
+			session['option_2'] = request.form.get("option2", None)
+			return redirect('/results')
+	return render_template("input.html")
 
 @app.route ("/results",  methods = ["GET","POST"])
 def results():
+    if ('description' in session.keys() and 'option_1' in session.keys() and "option_2" in session.keys()):
+    	return render_template("results.html",dscr=session["description"],optn1=session["option_1"],optn2=session["option_2"])
+    else:
+    	return redirect('/')
 	return render_template("results.html")
 
 @app.route("/logout")
