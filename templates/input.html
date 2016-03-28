@@ -4,14 +4,18 @@
 = endblock
 
 = block body
-<p> Make your Tiebreaking request here </p>
+<div class="page-message">
+<h1>Ask Away</h1>
+<h3>What Do You Want to Know?</h3>
+<hr class="intro-divider">
+</div>
 <form method="POST" id="frm">
-	Describe your question:<br>
-  <input type="text" name="description" value=""><br>
-  Option 1:<br>
-  <input type="text" name="option1" value=""><br><br>
-  Option 2:<br>
-  <input type="text" name="option2" value=""><br><br>
-  <input type="submit" name="button" value="Submit">
+  <p class="input-text"> My Question<p>
+  <input type="text" name="description" value="" class="form-input"><br>
+  <p class="input-text"> Option 1<p>
+  <input type="text" name="option1" value="" class= "form-input"><br>
+   <p class="input-text"> Option 2<p>
+  <input type="text" name="option2" value="" class= "form-input"><br><br>
+  <input type="submit" name="button" value="Submit" class="btn btn-default btn-lg"> 
 </form>
 = endblock
