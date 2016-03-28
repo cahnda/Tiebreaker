@@ -10,12 +10,21 @@
 <hr class="intro-divider">
 </div>
 <form method="POST" id="frm">
-  <p class="input-text"> My Question<p>
-  <input type="text" name="description" value="" class="form-input"><br>
-  <p class="input-text"> Option 1<p>
-  <input type="text" name="option1" value="" class= "form-input"><br>
-   <p class="input-text"> Option 2<p>
-  <input type="text" name="option2" value="" class= "form-input"><br><br>
+  <h3 class="input-text"> My Question<h3>
+  <textarea name="description" value="" class="form-input"></textarea><br><br>
+  <table align="center">
+  <tr>
+    <th align="left" style="padding-right: 20px">
+  		<h3 class="input-text" align="center"> Option 1<h3>
+  		<textarea name="option1" value="" class= "form-input"></textarea>
+	</th>
+	 <th align="right">
+   		<h3 class="input-text" align="center"> Option 2<h3>
+  		<textarea type="textarea" name="option2" value="" class= "form-input"></textarea>
+  	</th>
+  </tr>
+</table>
+<br>
   <input type="submit" name="button" value="Submit" class="btn btn-default btn-lg"> 
 </form>
 = endblock
