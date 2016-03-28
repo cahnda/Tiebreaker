@@ -3,6 +3,7 @@
 
 from flask import Flask, render_template, request, redirect, session, url_for
 from py import *
+from py import output
 import json
 
 app = Flask(__name__)
@@ -34,7 +35,14 @@ def input():
 @app.route ("/results",  methods = ["GET","POST"])
 def results():
     if ('description' in session.keys() and 'option_1' in session.keys() and "option_2" in session.keys()):
-    	return render_template("results.html",dscr=session["description"],optn1=session["option_1"],optn2=session["option_2"])
+    	arr = output.getFakeResults()
+    	return render_template(
+    		"results.html",
+    		dscr=session["description"],
+    		optn1=session["option_1"],
+    		optn2=session["option_2"],
+    		arr=arr
+    		)
     else:
     	return redirect('/')
 	return render_template("results.html")
