@@ -1,0 +1,53 @@
+= extends 'layout.html'
+= block title
+	Payment
+= endblock
+= block head
+
+= endblock
+
+= block body
+<div class="page-message" id = "main0">
+<h1 id = "ttl">Payment</h1>
+<h3 id = "sttl"> A Grand Total of $5 </h3>
+<hr class="intro-divider">
+</div>
+
+<div id = "accept_payment">
+<form action="" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-amount="500"
+    data-name="Tiebreaker"
+    data-description="50 Responses ($5.00)"
+    data-image="static/images/stripe.png"
+    data-locale="auto">
+  </script>
+</form>
+</div>
+
+<br>
+<div id="WaitDialog" style="text-align: center">
+	<img  src="static/images/ajax-loader.gif"  class="loader"/>
+        <div style="margin-top: 10px; color: white">
+            <b> Your results will load when our query is complete. Please expect to wait ~10 min. </b>
+        </div>
+</div>
+
+</div>
+	<script>
+		$("#WaitDialog").hide();
+		var status = {{ status | tojson | safe }}
+		if (status == -1) {
+			$("#ttl").text("Payment Failed");
+			$("#sttl").text("Please Try Again");
+		}
+		if (status == 1) {
+			$("#ttl").text("Payment Succeeded!");
+			$("#sttl").text("Wait While We Aggregate Yours Results");
+			$("#accept_payment").hide();
+			$("#WaitDialog").show();
+			//$("#WaitDialog").modalDialog();
+		}
+	</script>
+= endblock

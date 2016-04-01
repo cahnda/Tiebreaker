@@ -4,6 +4,7 @@
 from flask import Flask, render_template, request, redirect, session, url_for
 from py import *
 from py import output
+import stripe
 import json
 
 app = Flask(__name__)
@@ -29,8 +30,38 @@ def input():
 			session['description'] = request.form.get("description", None)
 			session['option_1'] = request.form.get("option1", None)
 			session['option_2'] = request.form.get("option2", None)
-			return redirect('/results')
+			session['time_to_pay'] = 0;
+			session['payment_accepted'] = 0;
+			return redirect('/payment')
 	return render_template("input.html")
+
+@app.route ("/payment",  methods = ["GET","POST"])
+def payment():
+	if not('time_to_pay' in session and session['time_to_pay'] == 0):
+		return redirect("input")
+	if (session['payment_accepted'] == 0): 
+		if not request.method == "GET":
+			# Set your secret key: remember to change this to your live secret key in production
+			# See your keys here https://dashboard.stripe.com/account/apikeys
+			stripe.api_key = "sk_test_tk6tmmWXCJhAf1dIp0wUisuL"
+			
+			# Get the credit card details submitted by the form
+			token = request.form['stripeToken'] if 'stripeToken' in request.form else None
+
+			# Create the charge on Stripe's servers - this will charge the user's card
+			try:
+				charge = stripe.Charge.create(
+			    	amount=500, # amount in cents, again
+			    	currency="usd",
+			      	source=token,
+			      	description="Payment"
+			  		  )
+			  	session['payment_accepted'] = 1;
+			  	session['time_to_pay'] = 1;
+			except stripe.error.CardError, e:
+				session['payment_accepted'] = -1;
+			return render_template("payment.html", status=session['payment_accepted'])
+	return render_template("payment.html", status=session['payment_accepted'])
 
 @app.route ("/results",  methods = ["GET","POST"])
 def results():
