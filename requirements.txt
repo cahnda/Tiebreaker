@@ -10,8 +10,6 @@ pycosat==0.6.1
 pycrypto==2.6.1
 PyYAML==3.11
 requests==2.9.1
-scikit-learn==0.17
-sklearn==0.0
 sslstrip==0.9.2
 stripe==1.32.0
 Werkzeug==0.11.4
