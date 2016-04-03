@@ -32,7 +32,7 @@ def input():
 			session['option_2'] = request.form.get("option2", None)
 			session['time_to_pay'] = 0;
 			session['payment_accepted'] = 0;
-			return redirect('/payment')
+			return redirect('/results')
 	return render_template("input.html")
 
 @app.route ("/payment",  methods = ["GET","POST"])
@@ -43,7 +43,7 @@ def payment():
 		if not request.method == "GET":
 			# Set your secret key: remember to change this to your live secret key in production
 			# See your keys here https://dashboard.stripe.com/account/apikeys
-			stripe.api_key = "sk_test_tk6tmmWXCJhAf1dIp0wUisuL"
+			stripe.api_key = ""
 			
 			# Get the credit card details submitted by the form
 			token = request.form['stripeToken'] if 'stripeToken' in request.form else None
