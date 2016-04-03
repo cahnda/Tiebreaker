@@ -6,7 +6,6 @@ graphviz==0.4.9
 itsdangerous==0.24
 Jinja2==2.8
 MarkupSafe==0.23
-numpy==1.10.2
 pycosat==0.6.1
 pycrypto==2.6.1
 PyYAML==3.11
