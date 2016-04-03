@@ -3,6 +3,7 @@ conda-env==2.4.2
 dpkt==1.8.7
 Flask==0.10.1
 graphviz==0.4.9
+gunicorn==18.0
 itsdangerous==0.24
 Jinja2==2.8
 MarkupSafe==0.23
