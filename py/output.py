@@ -2,11 +2,15 @@
 
 #Maps each response (Worker ID) to a list [Int: Vote, String: Explanation]
 fakeMatrix = {
-	"1": [0,"I hate you"],
-	"2": [0,"I love you"],
-	"3": [1,"meh"]
+	"1": [0,"Response1"],
+	"2": [0,"Response2"],
+	"3": [0,"Response3"],
+	"4": [0,"Response4"],
+	"5": [0,"Response5"],
+	"6": [0,"Response6"]
 }
 
+sampleResults = [(0,"Response1"),(0,"Response2"),(0,"Response3"),(0,"Response4"),(0,"Response5"),(0,"Response6")]
 
 def getResults(resultsMatrix):
 	voteCountA = 0
@@ -21,7 +25,19 @@ def getResults(resultsMatrix):
 		else: 
 			voteCountB = voteCountB + 1
 			explanationsB.append(lst[1])
+	#while (len (explanationsA) > len (explanationsB)):
+		#explanationsB.append(" ")
+	#while (len (explanationsB) > len (explanationsA)):
+		#explanationsA.append(" ")
 	return [voteCountA,voteCountB,explanationsA,explanationsB]
 
+def convert(tupleMatrix):
+	num = 0
+	outputMatrix = {}
+	for tpl in tupleMatrix:
+		outputMatrix[str(num)] = [tpl[0],tpl[1]]
+		num = num + 1
+	return outputMatrix
+
 def getFakeResults():
-	return getResults(fakeMatrix)
+	return getResults(convert(sampleResults))

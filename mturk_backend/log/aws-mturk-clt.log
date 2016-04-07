@@ -3585,3 +3585,620 @@ Results have been written to file '../samples/simple_survey/newDir1/simple_surve
 [2016-03-30 11:31:11] INFO  (GetResults.java: 134) - Assignments completed: 50/50 (100%)
 [2016-03-30 11:31:11] INFO  (GetResults.java: 139) -          Time elapsed: 7:12:46 (h:mm:ss)
 [2016-03-30 11:31:11] INFO  (GetResults.java: 142) -   Average submit time: 48.2 seconds
+[2016-04-07 16:02:24] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 16:02:24] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 16:02:24] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 16:02:24] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 16:02:24] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 16:02:25] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:02:25] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:02:25] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:02:25] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:02:25] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:02:25] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:02:25] ERROR (LoadHITs.java: 133) - Error loading HITs: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+com.amazonaws.mturk.service.exception.InternalServiceException: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:243)
+	at com.amazonaws.mturk.filter.FinalFilter.execute(FinalFilter.java:38)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:46)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:301)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.amazonaws.mturk.requester.AWSMechanicalTurkRequesterBindingStub.getAccountBalance(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:220)
+	... 18 more
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.verifyHostname(StrictSSLProtocolSocketFactory.java:293)
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.createSocket(StrictSSLProtocolSocketFactory.java:215)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:196)
+	... 33 more
+[2016-04-07 16:04:50] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 16:04:50] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 16:04:50] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 16:04:50] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 16:04:50] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 16:04:50] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:04:50] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:04:50] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:04:50] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:04:50] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:04:50] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:04:50] ERROR (LoadHITs.java: 133) - Error loading HITs: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+com.amazonaws.mturk.service.exception.InternalServiceException: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:243)
+	at com.amazonaws.mturk.filter.FinalFilter.execute(FinalFilter.java:38)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:46)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:301)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.amazonaws.mturk.requester.AWSMechanicalTurkRequesterBindingStub.getAccountBalance(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:220)
+	... 18 more
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.verifyHostname(StrictSSLProtocolSocketFactory.java:293)
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.createSocket(StrictSSLProtocolSocketFactory.java:215)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:196)
+	... 33 more
+[2016-04-07 16:16:09] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 16:16:09] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 16:16:09] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 16:16:09] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 16:16:09] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 16:16:09] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:16:09] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:16:09] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:16:09] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:16:09] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:16:09] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:16:10] ERROR (LoadHITs.java: 133) - Error loading HITs: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+com.amazonaws.mturk.service.exception.InternalServiceException: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:243)
+	at com.amazonaws.mturk.filter.FinalFilter.execute(FinalFilter.java:38)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:46)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:301)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.amazonaws.mturk.requester.AWSMechanicalTurkRequesterBindingStub.getAccountBalance(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:220)
+	... 18 more
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.verifyHostname(StrictSSLProtocolSocketFactory.java:293)
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.createSocket(StrictSSLProtocolSocketFactory.java:215)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:196)
+	... 33 more
+[2016-04-07 16:17:43] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 16:17:43] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 16:17:43] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 16:17:43] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 16:17:43] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 16:17:43] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:17:43] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:17:43] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:17:43] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:17:43] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:17:43] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:17:43] ERROR (LoadHITs.java: 133) - Error loading HITs: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+com.amazonaws.mturk.service.exception.InternalServiceException: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:243)
+	at com.amazonaws.mturk.filter.FinalFilter.execute(FinalFilter.java:38)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:46)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:301)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.amazonaws.mturk.requester.AWSMechanicalTurkRequesterBindingStub.getAccountBalance(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:220)
+	... 18 more
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.verifyHostname(StrictSSLProtocolSocketFactory.java:293)
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.createSocket(StrictSSLProtocolSocketFactory.java:215)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:196)
+	... 33 more
+[2016-04-07 16:27:38] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 16:27:38] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 16:27:38] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 16:27:38] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 16:27:38] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 16:27:39] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:27:39] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:27:39] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:27:39] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:27:39] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:27:39] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:27:39] ERROR (LoadHITs.java: 133) - Error loading HITs: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+com.amazonaws.mturk.service.exception.InternalServiceException: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:243)
+	at com.amazonaws.mturk.filter.FinalFilter.execute(FinalFilter.java:38)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:46)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:301)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.amazonaws.mturk.requester.AWSMechanicalTurkRequesterBindingStub.getAccountBalance(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:220)
+	... 18 more
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.verifyHostname(StrictSSLProtocolSocketFactory.java:293)
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.createSocket(StrictSSLProtocolSocketFactory.java:215)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:196)
+	... 33 more
+[2016-04-07 16:28:21] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 16:28:21] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 16:28:21] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 16:28:21] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 16:28:21] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 16:28:21] ERROR (LoadHITs.java: 133) - Error loading HITs: This request must be made over a secure channel. You must use 'https' rather than 'http'.
+com.amazonaws.mturk.service.exception.InternalServiceException: This request must be made over a secure channel. You must use 'https' rather than 'http'.
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:243)
+	at com.amazonaws.mturk.filter.FinalFilter.execute(FinalFilter.java:38)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:46)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: This request must be made over a secure channel. You must use 'https' rather than 'http'.
+	at org.apache.axis.message.SOAPFaultBuilder.createFault(SOAPFaultBuilder.java:222)
+	at org.apache.axis.message.SOAPFaultBuilder.endElement(SOAPFaultBuilder.java:129)
+	at org.apache.axis.encoding.DeserializationContext.endElement(DeserializationContext.java:1087)
+	at org.apache.xerces.parsers.AbstractSAXParser.endElement(Unknown Source)
+	at org.apache.xerces.impl.XMLNSDocumentScannerImpl.scanEndElement(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl$FragmentContentDispatcher.dispatch(Unknown Source)
+	at org.apache.xerces.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source)
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source)
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.SAXParserImpl.parse(Unknown Source)
+	at org.apache.axis.encoding.DeserializationContext.parse(DeserializationContext.java:227)
+	at org.apache.axis.SOAPPart.getAsSOAPEnvelope(SOAPPart.java:696)
+	at org.apache.axis.Message.getSOAPEnvelope(Message.java:435)
+	at org.apache.axis.handlers.soap.MustUnderstandChecker.invoke(MustUnderstandChecker.java:62)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:206)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.amazonaws.mturk.requester.AWSMechanicalTurkRequesterBindingStub.getAccountBalance(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:220)
+	... 18 more
+[2016-04-07 16:47:21] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 16:47:21] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 16:47:21] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 16:47:21] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 16:47:21] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 16:47:21] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '72.21.215.179', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:47:21] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:47:22] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '72.21.215.179', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:47:22] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:47:22] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '72.21.215.179', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:47:22] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:47:22] ERROR (LoadHITs.java: 133) - Error loading HITs: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '72.21.215.179', received 'mechanicalturk.sandbox.amazonaws.com'
+com.amazonaws.mturk.service.exception.InternalServiceException: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '72.21.215.179', received 'mechanicalturk.sandbox.amazonaws.com'
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:243)
+	at com.amazonaws.mturk.filter.FinalFilter.execute(FinalFilter.java:38)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:46)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '72.21.215.179', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:301)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.amazonaws.mturk.requester.AWSMechanicalTurkRequesterBindingStub.getAccountBalance(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:220)
+	... 18 more
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '72.21.215.179', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.verifyHostname(StrictSSLProtocolSocketFactory.java:293)
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.createSocket(StrictSSLProtocolSocketFactory.java:215)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:196)
+	... 33 more
+[2016-04-07 16:56:44] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 16:56:44] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 16:56:44] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 16:56:44] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 16:56:44] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 16:56:45] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:56:45] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:56:45] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:56:45] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:56:45] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:56:45] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:56:45] ERROR (LoadHITs.java: 133) - Error loading HITs: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+com.amazonaws.mturk.service.exception.InternalServiceException: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:243)
+	at com.amazonaws.mturk.filter.FinalFilter.execute(FinalFilter.java:38)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:46)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:301)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.amazonaws.mturk.requester.AWSMechanicalTurkRequesterBindingStub.getAccountBalance(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:220)
+	... 18 more
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '176.32.98.65', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.verifyHostname(StrictSSLProtocolSocketFactory.java:293)
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.createSocket(StrictSSLProtocolSocketFactory.java:215)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:196)
+	... 33 more
+[2016-04-07 16:58:41] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 16:58:41] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 16:58:41] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 16:58:41] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 16:58:41] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 16:58:41] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:58:41] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:58:41] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:58:41] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:58:41] INFO  (HttpMethodDirector.java: 439) - I/O exception (javax.net.ssl.SSLPeerUnverifiedException) caught when processing request: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+[2016-04-07 16:58:41] INFO  (HttpMethodDirector.java: 445) - Retrying request
+[2016-04-07 16:58:41] ERROR (LoadHITs.java: 133) - Error loading HITs: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+com.amazonaws.mturk.service.exception.InternalServiceException: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:243)
+	at com.amazonaws.mturk.filter.FinalFilter.execute(FinalFilter.java:38)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:46)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequests(FilteredAWSService.java:172)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:152)
+	at com.amazonaws.mturk.service.axis.FilteredAWSService.executeRequest(FilteredAWSService.java:116)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.getAccountBalance(RequesterServiceRaw.java:1193)
+	at com.amazonaws.mturk.service.axis.RequesterService.getAccountBalance(RequesterService.java:922)
+	at com.amazonaws.mturk.cmd.LoadHITs.checkFunds(LoadHITs.java:150)
+	at com.amazonaws.mturk.cmd.LoadHITs.loadHITs(LoadHITs.java:226)
+	at com.amazonaws.mturk.cmd.LoadHITs.runCommand(LoadHITs.java:120)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:148)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:301)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.amazonaws.mturk.requester.AWSMechanicalTurkRequesterBindingStub.getAccountBalance(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at com.amazonaws.mturk.service.axis.AWSService.executeRequestMessage(AWSService.java:220)
+	... 18 more
+Caused by: javax.net.ssl.SSLPeerUnverifiedException: HTTPS hostname invalid: expected '205.251.243.251', received 'mechanicalturk.sandbox.amazonaws.com'
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.verifyHostname(StrictSSLProtocolSocketFactory.java:293)
+	at org.apache.commons.httpclient.contrib.ssl.StrictSSLProtocolSocketFactory.createSocket(StrictSSLProtocolSocketFactory.java:215)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.axis.transport.http.CommonsHTTPSender.invoke(CommonsHTTPSender.java:196)
+	... 33 more
+[2016-04-07 17:09:17] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 17:09:17] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 17:09:17] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 17:09:17] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 17:09:17] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 17:09:18] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-07 17:09:18] INFO  (LoadHITs.java: 231) -   Start time: Thu Apr 07 17:09:18 EDT 2016
+[2016-04-07 17:09:18] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 2 threads
+[2016-04-07 17:09:18] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3PEG1BH7AE2HKWNXX0WE3QD7YNKBKU
+[2016-04-07 17:09:18] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3H9KHFULG4EHYTWC96MM0VZCJIYCE1' here: 
+[2016-04-07 17:09:18] INFO  (RequesterService.java: 1593) - 
+  https://workersandbox.mturk.com/mturk/preview?groupId=3H9KHFULG4EHYTWC96MM0VZCJIYCE1
+
+[2016-04-07 17:09:18] INFO  (LoadHITs.java: 239) -   End time: Thu Apr 07 17:09:18 EDT 2016
+[2016-04-07 17:09:18] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-07 17:09:18] INFO  (LoadHITs.java: 241) -   Total load time: 0 seconds.
+[2016-04-07 17:09:18] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-07 17:45:28] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 17:45:28] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 17:45:28] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 17:45:28] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 17:45:28] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 17:45:29] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-07 17:45:29] INFO  (LoadHITs.java: 231) -   Start time: Thu Apr 07 17:45:29 EDT 2016
+[2016-04-07 17:45:29] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 2 threads
+[2016-04-07 17:45:29] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3FTID4TN8L9OHAYQSSMZQ1ON8WHLYW
+[2016-04-07 17:45:29] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3H9KHFULG4EHYTWC96MM0VZCJIYCE1' here: 
+[2016-04-07 17:45:29] INFO  (RequesterService.java: 1593) - 
+  https://workersandbox.mturk.com/mturk/preview?groupId=3H9KHFULG4EHYTWC96MM0VZCJIYCE1
+
+[2016-04-07 17:45:29] INFO  (LoadHITs.java: 239) -   End time: Thu Apr 07 17:45:29 EDT 2016
+[2016-04-07 17:45:29] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-07 17:45:29] INFO  (LoadHITs.java: 241) -   Total load time: 0 seconds.
+[2016-04-07 17:45:29] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-07 17:56:16] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 17:56:16] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 17:56:16] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 17:56:16] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 17:56:16] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 17:56:17] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-07 17:56:17] INFO  (LoadHITs.java: 231) -   Start time: Thu Apr 07 17:56:17 EDT 2016
+[2016-04-07 17:56:17] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 2 threads
+[2016-04-07 17:56:17] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=329E6HTMSWDCH1JKI7H8L7FVAVJK3O
+[2016-04-07 17:56:17] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3H9KHFULG4EHYTWC96MM0VZCJIYCE1' here: 
+[2016-04-07 17:56:17] INFO  (RequesterService.java: 1593) - 
+  https://workersandbox.mturk.com/mturk/preview?groupId=3H9KHFULG4EHYTWC96MM0VZCJIYCE1
+
+[2016-04-07 17:56:17] INFO  (LoadHITs.java: 239) -   End time: Thu Apr 07 17:56:17 EDT 2016
+[2016-04-07 17:56:17] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-07 17:56:17] INFO  (LoadHITs.java: 241) -   Total load time: 0 seconds.
+[2016-04-07 17:56:17] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-07 18:04:27] INFO  (LoadHITs.java: 193) - --[Initializing]----------
+[2016-04-07 18:04:27] INFO  (LoadHITs.java: 194) -  Input: ../samples/simple_survey/newDir1/simple_survey.input
+[2016-04-07 18:04:27] INFO  (LoadHITs.java: 195) -  Properties: ../samples/simple_survey/newDir1/simple_survey.properties
+[2016-04-07 18:04:27] INFO  (LoadHITs.java: 196) -  Question File: ../samples/simple_survey/newDir1/simple_survey.question
+[2016-04-07 18:04:27] INFO  (LoadHITs.java: 202) -  Preview mode disabled
+[2016-04-07 18:04:28] INFO  (LoadHITs.java: 229) - --[Loading HITs]----------
+[2016-04-07 18:04:28] INFO  (LoadHITs.java: 231) -   Start time: Thu Apr 07 18:04:28 EDT 2016
+[2016-04-07 18:04:28] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 2 threads
+[2016-04-07 18:04:28] INFO  (RequesterService.java: 1548) - Created HIT 1: HITId=3XU80RHWHZRCLVDLXTZBOVI5R9R445
+[2016-04-07 18:04:28] INFO  (RequesterService.java: 1592) - 
+You may see your HIT(s) with HITTypeId '3H9KHFULG4EHYTWC96MM0VZCJIYCE1' here: 
+[2016-04-07 18:04:28] INFO  (RequesterService.java: 1593) - 
+  https://workersandbox.mturk.com/mturk/preview?groupId=3H9KHFULG4EHYTWC96MM0VZCJIYCE1
+
+[2016-04-07 18:04:28] INFO  (LoadHITs.java: 239) -   End time: Thu Apr 07 18:04:28 EDT 2016
+[2016-04-07 18:04:28] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
+[2016-04-07 18:04:28] INFO  (LoadHITs.java: 241) -   Total load time: 0 seconds.
+[2016-04-07 18:04:28] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
