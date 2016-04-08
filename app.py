@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from py import *
 import getKeys
 import os
-from py import output
+from py import output, helpers
 import stripe
 import json
 
@@ -94,6 +94,11 @@ def results():
     	return redirect('/')
 	return render_template("results.html")
 
+
+@app.route ("/account",  methods = ["GET","POST"])
+def account():
+	return render_template("account.html")
+
 @app.route("/logout")
 def logout():
 	if "google_user_dict" in session.keys():
@@ -103,6 +108,7 @@ def logout():
 @app.route("/googleoauth", methods = ["POST"])
 def googleoauth():
 	session["google_user_dict"] = request.json
+	print session["google_user_dict"]["displayName"]
 	return ""
 
 @app.errorhandler(404)

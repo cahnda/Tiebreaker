@@ -23,9 +23,12 @@
 									<input type="submit" value="Get Started" class="btn btn-default btn-lg">
 								</form>
                             </li>
+                            =  if session["google_user_dict"]
+                            = else
                             <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Login</span></a>
+                                <div class="btn btn-default btn-lg" id="customBtn"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Login</span></a></div>
                             </li>
+                            =endif
                             <li>
                                 <a href="https://github.com/cahnda/Tiebreaker" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                             </li>
