@@ -175,7 +175,7 @@ h6 {
 }
 
 .form-input {
-    font-size: 1em;
+    font-size: .8em;
     color: black;
     height: 100px;
     width: 300px;
@@ -199,5 +199,5 @@ table{
 }
 
 p.copyright {
-    margin: 15px 0 0;
+    margin: 0px 0 0;
 }

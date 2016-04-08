@@ -3,6 +3,10 @@
 	Request
 = endblock
 
+=block head
+    <link href="static/css/input.css" rel="stylesheet">
+=endblock
+
 = block body
 <div class="page-message">
 <h1>Ask Away</h1>
@@ -10,21 +14,21 @@
 <hr class="intro-divider">
 </div>
 <form method="POST" id="frm">
-  <h3 class="input-text"> My Question<h3>
-  <textarea name="description" value="" class="form-input"></textarea><br><br>
-  <table align="center">
-  <tr>
-    <th align="left" style="padding-right: 20px">
-  		<h3 class="input-text" align="center"> Option 1<h3>
-  		<textarea name="option1" value="" class= "form-input"></textarea>
-	</th>
-	 <th align="right">
-   		<h3 class="input-text" align="center"> Option 2<h3>
-  		<textarea type="textarea" name="option2" value="" class= "form-input"></textarea>
-  	</th>
-  </tr>
-</table>
-<br>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">Question Description</span>
+    <textarea type="textarea" name="description" value="" class= "form-control" aria-describedby="basic-addon1" placeholder="Which  is a better title, A or B?" ></textarea>  
+  </div>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">Option 1</span>
+    <textarea type="textarea" name="option1" value="" class= "form-control" aria-describedby="basic-addon2" placeholder="Title 1?" ></textarea>
+  </div>
+  <br>
+  <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">Option 2</span>
+    <textarea type="textarea" name="option2" value="" class= "form-control" aria-describedby="basic-addon3" placeholder="Title 2" ></textarea>
+  </div>
+  <br>
   <input type="submit" name="button" value="Submit" class="btn btn-default btn-lg"> 
 </form>
 = endblock
