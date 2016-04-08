@@ -5,6 +5,10 @@
 	Request
 = endblock
 
+=block head
+    <link href="static/css/account.css" rel="stylesheet">
+=endblock
+
 = block body
 <div class="page-message">
 <h1>Welcome, {{name}}!</h1>
@@ -13,10 +17,19 @@
 </div>
 
 = for result in allResults
-	<p> {{result["description"]}}<p>
-	<p> {{result["option_1"]}}({{result["html_data"][0]}}) <p>
-	<p> {{result["option_2"]}}({{result["html_data"][1]}}) <p>
-	<a href="/result={{ result['_id'] }}">Click here to view full results </a>
+	 <!-- Marketing Icons Section -->
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i></i> {{result["description"]}}</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p class = "option_text">Option 1: {{result["option_1"]}} -- {{result["html_data"][0]}} Votes </p>
+                        <p class = "option_text">Option 2: {{result["option_2"]}} -- {{result["html_data"][1]}} Votes </p>
+                        <a href="/result={{ result['_id'] }}" class="btn btn-default">Full Results</a>
+                    </div>
+                </div>
+            </div>
 =endfor
 
 = endblock

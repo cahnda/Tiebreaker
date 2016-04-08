@@ -39,6 +39,4 @@ def add_mongo_result (idNum, dscr, opt1, opt2, data):
 	})
 
 def get_mongo_result (result_id):
-	print "FOUND"
-	print (ObjectId(result_id))
 	return resultList.find_one({"_id" : ObjectId(result_id)})
