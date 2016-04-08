@@ -4202,3 +4202,81 @@ You may see your HIT(s) with HITTypeId '3H9KHFULG4EHYTWC96MM0VZCJIYCE1' here:
 [2016-04-07 18:04:28] INFO  (LoadHITs.java: 240) - --[Done Loading HITs]----------
 [2016-04-07 18:04:28] INFO  (LoadHITs.java: 241) -   Total load time: 0 seconds.
 [2016-04-07 18:04:28] INFO  (LoadHITs.java: 243) -   Successfully loaded 1 HITs.
+[2016-04-08 10:42:17] ERROR (AbstractCmd.java: 150) - An error occurred: Invalid configuration for port
+java.lang.RuntimeException: Invalid configuration for port
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:240)
+	at com.amazonaws.mturk.service.axis.RequesterService.<init>(RequesterService.java:241)
+	at com.amazonaws.mturk.cmd.AbstractCmd.initService(AbstractCmd.java:119)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:143)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:96)
+	at com.amazonaws.mturk.util.HMACSigner.<init>(HMACSigner.java:65)
+	at com.amazonaws.mturk.service.axis.AWSService.setAccessKeyId(AWSService.java:124)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:233)
+	... 4 more
+[2016-04-08 10:47:32] ERROR (AbstractCmd.java: 150) - An error occurred: Invalid configuration for port
+java.lang.RuntimeException: Invalid configuration for port
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:240)
+	at com.amazonaws.mturk.service.axis.RequesterService.<init>(RequesterService.java:241)
+	at com.amazonaws.mturk.cmd.AbstractCmd.initService(AbstractCmd.java:119)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:143)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:96)
+	at com.amazonaws.mturk.util.HMACSigner.<init>(HMACSigner.java:65)
+	at com.amazonaws.mturk.service.axis.AWSService.setAccessKeyId(AWSService.java:124)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:233)
+	... 4 more
+[2016-04-08 11:06:43] ERROR (AbstractCmd.java: 150) - An error occurred: Invalid configuration for port
+java.lang.RuntimeException: Invalid configuration for port
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:240)
+	at com.amazonaws.mturk.service.axis.RequesterService.<init>(RequesterService.java:241)
+	at com.amazonaws.mturk.cmd.AbstractCmd.initService(AbstractCmd.java:119)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:143)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:96)
+	at com.amazonaws.mturk.util.HMACSigner.<init>(HMACSigner.java:65)
+	at com.amazonaws.mturk.service.axis.AWSService.setAccessKeyId(AWSService.java:124)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:233)
+	... 4 more
+[2016-04-08 11:09:04] ERROR (AbstractCmd.java: 150) - An error occurred: Invalid configuration for port
+java.lang.RuntimeException: Invalid configuration for port
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:240)
+	at com.amazonaws.mturk.service.axis.RequesterService.<init>(RequesterService.java:241)
+	at com.amazonaws.mturk.cmd.AbstractCmd.initService(AbstractCmd.java:119)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:143)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:96)
+	at com.amazonaws.mturk.util.HMACSigner.<init>(HMACSigner.java:65)
+	at com.amazonaws.mturk.service.axis.AWSService.setAccessKeyId(AWSService.java:124)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:233)
+	... 4 more
+[2016-04-08 11:10:48] ERROR (AbstractCmd.java: 150) - An error occurred: Invalid configuration for port
+java.lang.RuntimeException: Invalid configuration for port
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:240)
+	at com.amazonaws.mturk.service.axis.RequesterService.<init>(RequesterService.java:241)
+	at com.amazonaws.mturk.cmd.AbstractCmd.initService(AbstractCmd.java:119)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:143)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:96)
+	at com.amazonaws.mturk.util.HMACSigner.<init>(HMACSigner.java:65)
+	at com.amazonaws.mturk.service.axis.AWSService.setAccessKeyId(AWSService.java:124)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:233)
+	... 4 more
+[2016-04-08 11:14:00] ERROR (AbstractCmd.java: 150) - An error occurred: Invalid configuration for port
+java.lang.RuntimeException: Invalid configuration for port
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:240)
+	at com.amazonaws.mturk.service.axis.RequesterService.<init>(RequesterService.java:241)
+	at com.amazonaws.mturk.cmd.AbstractCmd.initService(AbstractCmd.java:119)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:143)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:96)
+	at com.amazonaws.mturk.util.HMACSigner.<init>(HMACSigner.java:65)
+	at com.amazonaws.mturk.service.axis.AWSService.setAccessKeyId(AWSService.java:124)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:233)
+	... 4 more

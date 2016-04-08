@@ -2,6 +2,8 @@
  *  Handles Google oauth login, and stores user information in Flask client.
 */
 
+var clicked = false;
+
 (function(){
 	var po = document.createElement('script');
 	po.type = 'text/javascript'; po.async = true;
@@ -19,6 +21,10 @@ function render() {
 	});
 }
 
+$("#customBtn").click(function() {
+ 	clicked = true;
+});
+
 function signinCallback(authResult) {
 	if (authResult['status']['signed_in']) {
 		console.log("login suceeed");
@@ -35,7 +41,11 @@ function signinCallback(authResult) {
 				})
 			});
 		});
-		location.reload();
+		if (clicked) {
+			location.reload();
+			clicked = false;
+		}
+		
 	}
 	else {
 		// Update the app to reflect a signed out user

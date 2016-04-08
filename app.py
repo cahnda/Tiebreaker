@@ -3,11 +3,7 @@
 
 from flask import Flask, render_template, request, redirect, session, url_for
 from py import *
-import getKeys
-import os
-from py import output, helpers
-import stripe
-import json
+import getKeys, os, stripe, json, datetime
 
 app = Flask(__name__)
 app.config.from_object('py.config')
@@ -35,6 +31,7 @@ def input():
 			session['time_to_pay'] = 0;
 			session['loaded_data'] = 0;
 			session['payment_accepted'] = 0;
+			session['added_DB'] = 0
 			return redirect('/payment')
 	return render_template("input.html")
 
@@ -83,6 +80,14 @@ def payment():
 def results():
     if ('description' in session.keys() and 'option_1' in session.keys() and "option_2" in session.keys()):
     	arr = session['data_array']
+    	if (session['added_DB'] == 0):
+    		utils.add_mongo_result(
+    			session["google_user_dict"]["id"],
+    			session["description"],
+    			session["option_1"],
+    			session["option_2"],
+    			arr)
+    		session['added_DB'] = 1
     	return render_template(
     		"results.html",
     		dscr=session["description"],
@@ -97,7 +102,30 @@ def results():
 
 @app.route ("/account",  methods = ["GET","POST"])
 def account():
-	return render_template("account.html")
+	if "google_user_dict" in session:
+		myName = session["google_user_dict"]["displayName"]
+		myID = session["google_user_dict"]["id"]
+		results = sorted(utils.get_my_results(myID), 
+			key=lambda x: datetime.datetime.strptime(x['time'], "%Y-%m-%d %H:%M:%S"))
+		return render_template("account.html",name=myName,allResults=results)
+	else: 
+		return redirect('/')
+
+@app.route("/result=<result_id>", methods=["GET", "POST"])
+def showResult(result_id):
+    if request.method == "GET":
+    	result = utils.get_mongo_result(result_id)
+        data = result["html_data"]
+        dsc = result["description"]
+        opt1 = result["option_1"]
+        opt2 = result["option_2"]
+        return render_template(
+        	"results.html", 
+        	dscr=dsc,
+    		optn1=opt1,
+    		optn2=opt2,
+    		arr=data
+    		)
 
 @app.route("/logout")
 def logout():
@@ -108,7 +136,7 @@ def logout():
 @app.route("/googleoauth", methods = ["POST"])
 def googleoauth():
 	session["google_user_dict"] = request.json
-	print session["google_user_dict"]["displayName"]
+	#print session["google_user_dict"]
 	return ""
 
 @app.errorhandler(404)

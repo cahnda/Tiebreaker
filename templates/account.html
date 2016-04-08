@@ -6,4 +6,17 @@
 = endblock
 
 = block body
+<div class="page-message">
+<h1>Welcome, {{name}}!</h1>
+<h3>Here are Your Previous Results</h3>
+<hr class="intro-divider">
+</div>
+
+= for result in allResults
+	<p> {{result["description"]}}<p>
+	<p> {{result["option_1"]}}({{result["html_data"][0]}}) <p>
+	<p> {{result["option_2"]}}({{result["html_data"][1]}}) <p>
+	<a href="/result={{ result['_id'] }}">Click here to view full results </a>
+=endfor
+
 = endblock
