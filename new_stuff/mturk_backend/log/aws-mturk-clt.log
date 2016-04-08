@@ -8657,3 +8657,845 @@ Results have been written to file '../samples/simple_survey/newDir5/simple_surve
 [2016-04-08 01:18:39] INFO  (GetResults.java: 134) - Assignments completed: 5/5 (100%)
 [2016-04-08 01:18:39] INFO  (GetResults.java: 139) -          Time elapsed: 0:31:33 (h:mm:ss)
 [2016-04-08 01:18:39] INFO  (GetResults.java: 142) -   Average submit time: 79.4 seconds
+[2016-04-08 01:39:53] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:39:53] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:00] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 2 pending Mechanical Turk requests
+[2016-04-08 01:41:03] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:03] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:04] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3TCFMTM8HEZLQI1F6X2HW61L4FN216): Error #1 for RequestId: ff2d2f0a-c4f6-4535-b0d5-6138bc56245f - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094064752)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: ff2d2f0a-c4f6-4535-b0d5-6138bc56245f - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094064752)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:04] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:04] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:04] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:41:06] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:06] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:07] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3W9XHF7WGK6HGIHEXMSV286ADY0KTJ): Error #1 for RequestId: 8ffcd016-04c0-40d9-8530-aa99203f9b4c - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094067417)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 8ffcd016-04c0-40d9-8530-aa99203f9b4c - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094067417)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:07] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:07] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:09] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:09] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:10] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3RKHNXPHGW7WGVW3XRI574SCWC7KUA): Error #1 for RequestId: b9e11fbc-a80b-45bb-baa4-d40afb112f1a - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094070459)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: b9e11fbc-a80b-45bb-baa4-d40afb112f1a - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094070459)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:10] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:10] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:11] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:11] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:12] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (341H3G5YF0PBP4J9ZL7V5CSIKWFZ07): Error #1 for RequestId: 1dc53ed7-a4a0-4ce2-aa13-4d057146c15d - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094072678)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 1dc53ed7-a4a0-4ce2-aa13-4d057146c15d - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094072678)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:12] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:12] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:14] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:14] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:15] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3BFF0DJK8XNF41UM2V1XTUXKUSCTS8): Error #1 for RequestId: 2b6b8f75-b61f-4387-a72c-f5149c2f49b3 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094074967)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 2b6b8f75-b61f-4387-a72c-f5149c2f49b3 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094074967)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:15] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:15] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:15] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:41:16] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:16] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:17] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (32LAQ1JNT90VJEMQR0WX8VF8FPXTUO): Error #1 for RequestId: 29899405-cdca-4e93-9d12-d99467f62726 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094077170)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 29899405-cdca-4e93-9d12-d99467f62726 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094077170)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:17] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:17] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:31] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:31] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:32] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3TCFMTM8HEZLQI1F6X2HW61L4FN216): Error #1 for RequestId: d3558859-ee2c-46e7-85ad-fb0eb9f26b49 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094092417)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: d3558859-ee2c-46e7-85ad-fb0eb9f26b49 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094092417)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:32] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:32] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:33] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:33] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:34] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3W9XHF7WGK6HGIHEXMSV286ADY0KTJ): Error #1 for RequestId: 7f8a9500-cb08-4560-9c6c-19ea000252b2 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094094313)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 7f8a9500-cb08-4560-9c6c-19ea000252b2 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094094313)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:34] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:34] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:34] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:41:35] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:35] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:36] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3RKHNXPHGW7WGVW3XRI574SCWC7KUA): Error #1 for RequestId: d671fa8a-5a5c-49f1-986c-4d5f1976d483 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094096603)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: d671fa8a-5a5c-49f1-986c-4d5f1976d483 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094096603)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:36] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:36] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:37] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:37] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:38] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (341H3G5YF0PBP4J9ZL7V5CSIKWFZ07): Error #1 for RequestId: 99729cf3-fbe8-4682-b86f-4c8a0d03d59e - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094098364)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 99729cf3-fbe8-4682-b86f-4c8a0d03d59e - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094098364)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:38] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:38] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:38] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:41:39] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:39] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:40] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3BFF0DJK8XNF41UM2V1XTUXKUSCTS8): Error #1 for RequestId: 297bc4b4-fd44-481a-a814-3ae636bf0614 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094100599)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 297bc4b4-fd44-481a-a814-3ae636bf0614 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094100599)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:40] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:40] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:41] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:41] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:43] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (32LAQ1JNT90VJEMQR0WX8VF8FPXTUO): Error #1 for RequestId: e166604f-c26a-4b43-8535-334c19217469 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094103056)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: e166604f-c26a-4b43-8535-334c19217469 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094103056)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:43] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:43] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:58] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:41:58] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:41:59] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3TCFMTM8HEZLQI1F6X2HW61L4FN216): Error #1 for RequestId: 4e2c413a-edbf-45c8-8242-01541a149c08 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094119596)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 4e2c413a-edbf-45c8-8242-01541a149c08 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094119596)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:41:59] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:41:59] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:41:59] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:42:00] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:42:00] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:42:01] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3W9XHF7WGK6HGIHEXMSV286ADY0KTJ): Error #1 for RequestId: db4da41c-463d-4916-9494-04ce05e4ef4d - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094121675)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: db4da41c-463d-4916-9494-04ce05e4ef4d - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094121675)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:42:01] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:42:01] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:42:01] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:42:02] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:42:02] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:42:03] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3RKHNXPHGW7WGVW3XRI574SCWC7KUA): Error #1 for RequestId: 04b8a9de-903a-4248-b026-cd1b907f2e60 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094123945)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 04b8a9de-903a-4248-b026-cd1b907f2e60 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094123945)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:42:03] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:42:03] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:42:04] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:42:04] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:42:05] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (341H3G5YF0PBP4J9ZL7V5CSIKWFZ07): Error #1 for RequestId: 7242efde-e7bd-4361-b6d7-3ccce858f08e - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094125889)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 7242efde-e7bd-4361-b6d7-3ccce858f08e - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094125889)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:42:05] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:42:05] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:42:05] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:42:07] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:42:07] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:42:07] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3BFF0DJK8XNF41UM2V1XTUXKUSCTS8): Error #1 for RequestId: 9541957d-9c62-45b6-96ec-7fb231133e31 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094127964)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 9541957d-9c62-45b6-96ec-7fb231133e31 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094127964)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:42:07] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:42:07] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:42:07] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:42:09] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:42:09] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:42:10] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (32LAQ1JNT90VJEMQR0WX8VF8FPXTUO): Error #1 for RequestId: b872b6b9-a061-42a1-82ac-adf3896600d2 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094130031)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: b872b6b9-a061-42a1-82ac-adf3896600d2 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094130031)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:42:10] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:42:10] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:42:10] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:42:29] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:42:29] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:42:30] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3TCFMTM8HEZLQI1F6X2HW61L4FN216): Error #1 for RequestId: 2ac3afd4-a3c1-4a62-ad3e-31a114938185 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094150711)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 2ac3afd4-a3c1-4a62-ad3e-31a114938185 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094150711)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:42:30] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:42:30] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:42:30] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:42:31] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:42:31] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:42:32] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3W9XHF7WGK6HGIHEXMSV286ADY0KTJ): Error #1 for RequestId: 98975bc9-3016-400b-867b-ff91813d3370 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094152798)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 98975bc9-3016-400b-867b-ff91813d3370 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094152798)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:42:32] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:42:32] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:42:32] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:42:33] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:42:33] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:42:35] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3RKHNXPHGW7WGVW3XRI574SCWC7KUA): Error #1 for RequestId: 0bddd461-b96c-4884-99cb-4336a9aed457 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094154971)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 0bddd461-b96c-4884-99cb-4336a9aed457 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094154971)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:42:35] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:42:35] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:42:36] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:42:36] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:42:37] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (341H3G5YF0PBP4J9ZL7V5CSIKWFZ07): Error #1 for RequestId: 775f2cf2-6c23-49e8-b350-9464b366ebdc - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094157273)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 775f2cf2-6c23-49e8-b350-9464b366ebdc - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094157273)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:42:37] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:42:37] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:42:38] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:42:38] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:42:39] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3BFF0DJK8XNF41UM2V1XTUXKUSCTS8): Error #1 for RequestId: ce694a26-71c6-4333-9795-0d4f9c21d79a - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094159426)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: ce694a26-71c6-4333-9795-0d4f9c21d79a - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094159426)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:42:39] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:42:39] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:42:39] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:42:40] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:42:40] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:42:41] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (32LAQ1JNT90VJEMQR0WX8VF8FPXTUO): Error #1 for RequestId: 0502ba1c-56d7-42e0-b743-0e0555c638ec - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094161842)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 0502ba1c-56d7-42e0-b743-0e0555c638ec - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094161842)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:42:41] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:42:41] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:42:41] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:44:06] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:44:06] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:44:07] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3TCFMTM8HEZLQI1F6X2HW61L4FN216): Error #1 for RequestId: f99e917c-3354-4cf9-b206-c381a03ea0bc - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094247572)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: f99e917c-3354-4cf9-b206-c381a03ea0bc - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094247572)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:44:07] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:44:07] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:44:07] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:44:08] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:44:08] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:44:09] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3W9XHF7WGK6HGIHEXMSV286ADY0KTJ): Error #1 for RequestId: 3af3178e-17eb-47a9-b209-baed77b919d0 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094249394)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 3af3178e-17eb-47a9-b209-baed77b919d0 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094249394)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:44:09] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:44:09] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:44:09] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:44:10] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:44:10] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:44:11] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3RKHNXPHGW7WGVW3XRI574SCWC7KUA): Error #1 for RequestId: 259d77f3-8a17-467c-ae3b-d8d752ac670b - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094251314)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 259d77f3-8a17-467c-ae3b-d8d752ac670b - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094251314)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:44:11] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:44:11] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:44:12] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:44:12] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:44:13] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (341H3G5YF0PBP4J9ZL7V5CSIKWFZ07): Error #1 for RequestId: e6ae4abe-faf9-43e3-9e8a-8a8513e64624 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094253583)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: e6ae4abe-faf9-43e3-9e8a-8a8513e64624 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094253583)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:44:13] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:44:13] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:44:14] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:44:14] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:44:15] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3BFF0DJK8XNF41UM2V1XTUXKUSCTS8): Error #1 for RequestId: 292b5733-e228-42f9-9ddc-fc639eb45c88 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094255414)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 292b5733-e228-42f9-9ddc-fc639eb45c88 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094255414)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:44:15] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:44:15] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:44:15] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:44:16] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:44:16] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:44:17] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (32LAQ1JNT90VJEMQR0WX8VF8FPXTUO): Error #1 for RequestId: 1485c573-4fb6-4451-bcf5-42de8eacd156 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094257726)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 1485c573-4fb6-4451-bcf5-42de8eacd156 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094257726)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:44:17] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:44:17] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:44:41] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:44:41] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:44:42] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3TCFMTM8HEZLQI1F6X2HW61L4FN216): Error #1 for RequestId: f772dcd9-8947-4175-a7b8-f3f4f3f0ef1a - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094282489)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: f772dcd9-8947-4175-a7b8-f3f4f3f0ef1a - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094282489)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:44:42] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:44:42] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:44:42] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:44:43] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:44:43] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:44:44] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3W9XHF7WGK6HGIHEXMSV286ADY0KTJ): Error #1 for RequestId: 1b644eb8-4daf-41e2-807c-e55a69fffc99 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094284744)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 1b644eb8-4daf-41e2-807c-e55a69fffc99 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094284744)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:44:44] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:44:44] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:44:44] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:44:45] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:44:45] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:44:46] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3RKHNXPHGW7WGVW3XRI574SCWC7KUA): Error #1 for RequestId: fc7ab2b6-04af-4550-9872-c6f1cb268ec1 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094286859)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: fc7ab2b6-04af-4550-9872-c6f1cb268ec1 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094286859)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:44:46] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:44:46] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:44:47] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:44:47] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:44:48] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (341H3G5YF0PBP4J9ZL7V5CSIKWFZ07): Error #1 for RequestId: 74aaec50-f217-4f4f-b315-e1cc1ee31b93 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094288889)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 74aaec50-f217-4f4f-b315-e1cc1ee31b93 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094288889)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:44:48] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:44:48] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:44:49] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:44:49] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:44:50] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3BFF0DJK8XNF41UM2V1XTUXKUSCTS8): Error #1 for RequestId: 77bdc3a2-91f2-4346-92a6-aa99574b257e - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094290741)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 77bdc3a2-91f2-4346-92a6-aa99574b257e - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094290741)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:44:50] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:44:50] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:44:50] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:44:51] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:44:51] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:44:52] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (32LAQ1JNT90VJEMQR0WX8VF8FPXTUO): Error #1 for RequestId: b9228ed2-edd9-4dd9-bf92-e9345e12c967 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094292723)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: b9228ed2-edd9-4dd9-bf92-e9345e12c967 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094292723)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:44:52] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:44:52] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:44:52] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:46:19] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:46:19] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:46:20] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3TCFMTM8HEZLQI1F6X2HW61L4FN216): Error #1 for RequestId: 5be97406-0b81-439d-926d-986668b78c53 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094380805)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 5be97406-0b81-439d-926d-986668b78c53 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094380805)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:46:20] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:46:20] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:46:20] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:46:21] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:46:21] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:46:22] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3W9XHF7WGK6HGIHEXMSV286ADY0KTJ): Error #1 for RequestId: 623b561c-7861-492e-b40f-60601188433f - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094382671)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 623b561c-7861-492e-b40f-60601188433f - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094382671)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:46:22] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:46:22] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:46:22] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:46:23] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:46:23] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:46:24] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3RKHNXPHGW7WGVW3XRI574SCWC7KUA): Error #1 for RequestId: 7dbde4b6-b05a-43d2-9131-c8381324870b - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094384824)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 7dbde4b6-b05a-43d2-9131-c8381324870b - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094384824)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:46:24] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:46:24] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:46:25] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:46:25] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:46:26] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (341H3G5YF0PBP4J9ZL7V5CSIKWFZ07): Error #1 for RequestId: 20f4e333-ab5e-47de-b04d-51fa57f95770 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094386623)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 20f4e333-ab5e-47de-b04d-51fa57f95770 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094386623)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:46:26] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:46:26] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:46:27] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:46:27] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:46:28] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (3BFF0DJK8XNF41UM2V1XTUXKUSCTS8): Error #1 for RequestId: 77286b01-697d-4c97-9f72-e4ae252ff5cc - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094388373)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 77286b01-697d-4c97-9f72-e4ae252ff5cc - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094388373)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:46:28] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:46:28] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:46:28] INFO  (WorkQueue.java: 71) - WARNING: Work queue has been shutdown with 1 pending Mechanical Turk requests
+[2016-04-08 01:46:29] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:46:29] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:46:30] ERROR (GetResults.java: 166) - Error retrieving HIT results for HIT 1/1 (32LAQ1JNT90VJEMQR0WX8VF8FPXTUO): Error #1 for RequestId: 3259a5f5-31fe-484d-ac9d-0b5d43634506 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094390551)
+com.amazonaws.mturk.service.exception.AccessKeyException: Error #1 for RequestId: 3259a5f5-31fe-484d-ac9d-0b5d43634506 - AWS.NotAuthorized: The identity contained in the request is not authorized to use this AWSAccessKeyId (1460094390551)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.processErrors(ErrorProcessingFilter.java:91)
+	at com.amazonaws.mturk.filter.ErrorProcessingFilter.execute(ErrorProcessingFilter.java:48)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.filter.RetryFilter.execute(RetryFilter.java:115)
+	at com.amazonaws.mturk.filter.Filter.passMessage(Filter.java:56)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.sendMessage(CLTExceptionFilter.java:77)
+	at com.amazonaws.mturk.util.CLTExceptionFilter.execute(CLTExceptionFilter.java:62)
+	at com.amazonaws.mturk.service.axis.AsyncRequest.call(AsyncRequest.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-04-08 01:46:30] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:46:30] INFO  (GetResults.java: 127) - Could not retrieve work successfully
+[2016-04-08 01:47:16] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:47:16] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:47:17] INFO  (GetResults.java: 162) - Retrieved HIT 1/1, 3TCFMTM8HEZLQI1F6X2HW61L4FN216
+[2016-04-08 01:47:17] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:47:17] INFO  (GetResults.java: 130) - 
+Results have been written to file '../samples/simple_survey/newDir0/simple_survey.results'.
+
+[2016-04-08 01:47:17] INFO  (GetResults.java: 134) - Assignments completed: 5/5 (100%)
+[2016-04-08 01:47:17] INFO  (GetResults.java: 139) -          Time elapsed: 0:05:12 (h:mm:ss)
+[2016-04-08 01:47:17] INFO  (GetResults.java: 142) -   Average submit time: 95.4 seconds
+[2016-04-08 01:47:18] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:47:18] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:47:19] INFO  (GetResults.java: 162) - Retrieved HIT 1/1, 3W9XHF7WGK6HGIHEXMSV286ADY0KTJ
+[2016-04-08 01:47:19] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:47:19] INFO  (GetResults.java: 130) - 
+Results have been written to file '../samples/simple_survey/newDir1/simple_survey.results'.
+
+[2016-04-08 01:47:19] INFO  (GetResults.java: 134) - Assignments completed: 5/5 (100%)
+[2016-04-08 01:47:19] INFO  (GetResults.java: 139) -          Time elapsed: 0:22:29 (h:mm:ss)
+[2016-04-08 01:47:19] INFO  (GetResults.java: 142) -   Average submit time: 123.4 seconds
+[2016-04-08 01:47:20] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:47:20] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:47:21] INFO  (GetResults.java: 162) - Retrieved HIT 1/1, 3RKHNXPHGW7WGVW3XRI574SCWC7KUA
+[2016-04-08 01:47:21] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:47:21] INFO  (GetResults.java: 130) - 
+Results have been written to file '../samples/simple_survey/newDir2/simple_survey.results'.
+
+[2016-04-08 01:47:21] INFO  (GetResults.java: 134) - Assignments completed: 5/5 (100%)
+[2016-04-08 01:47:21] INFO  (GetResults.java: 139) -          Time elapsed: 0:36:51 (h:mm:ss)
+[2016-04-08 01:47:21] INFO  (GetResults.java: 142) -   Average submit time: 115.2 seconds
+[2016-04-08 01:47:22] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:47:22] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:47:23] INFO  (GetResults.java: 162) - Retrieved HIT 1/1, 341H3G5YF0PBP4J9ZL7V5CSIKWFZ07
+[2016-04-08 01:47:23] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:47:23] INFO  (GetResults.java: 130) - 
+Results have been written to file '../samples/simple_survey/newDir3/simple_survey.results'.
+
+[2016-04-08 01:47:23] INFO  (GetResults.java: 134) - Assignments completed: 5/5 (100%)
+[2016-04-08 01:47:23] INFO  (GetResults.java: 139) -          Time elapsed: 0:15:45 (h:mm:ss)
+[2016-04-08 01:47:23] INFO  (GetResults.java: 142) -   Average submit time: 215.6 seconds
+[2016-04-08 01:47:24] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:47:24] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:47:25] INFO  (GetResults.java: 162) - Retrieved HIT 1/1, 3BFF0DJK8XNF41UM2V1XTUXKUSCTS8
+[2016-04-08 01:47:25] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:47:25] INFO  (GetResults.java: 130) - 
+Results have been written to file '../samples/simple_survey/newDir4/simple_survey.results'.
+
+[2016-04-08 01:47:25] INFO  (GetResults.java: 134) - Assignments completed: 5/5 (100%)
+[2016-04-08 01:47:25] INFO  (GetResults.java: 139) -          Time elapsed: 0:17:40 (h:mm:ss)
+[2016-04-08 01:47:25] INFO  (GetResults.java: 142) -   Average submit time: 195.4 seconds
+[2016-04-08 01:47:26] INFO  (GetResults.java: 119) - --[Retrieving Results]----------
+[2016-04-08 01:47:26] DEBUG (WorkQueue.java: 53) - Instantiating work queue with 10 threads
+[2016-04-08 01:47:27] INFO  (GetResults.java: 162) - Retrieved HIT 1/1, 32LAQ1JNT90VJEMQR0WX8VF8FPXTUO
+[2016-04-08 01:47:27] INFO  (GetResults.java: 123) - --[Done Retrieving Results]----------
+[2016-04-08 01:47:27] INFO  (GetResults.java: 130) - 
+Results have been written to file '../samples/simple_survey/newDir5/simple_survey.results'.
+
+[2016-04-08 01:47:27] INFO  (GetResults.java: 134) - Assignments completed: 5/5 (100%)
+[2016-04-08 01:47:27] INFO  (GetResults.java: 139) -          Time elapsed: 0:31:33 (h:mm:ss)
+[2016-04-08 01:47:27] INFO  (GetResults.java: 142) -   Average submit time: 79.4 seconds

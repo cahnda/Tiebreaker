@@ -76,21 +76,6 @@ def readN():
 	b = a.split('\t')	
 	return int(b[x])
 
-def sanitizeInputs():
-	os.chdir(newPath)
-	f = open('simple_survey.results')
-	contents = f.read()
-	f.close()
-	new_contents = contents.replace('\n', '\t')
-	f = open('simple_survey.results', 'w')
-	f.write(new_contents)
-	f.close()
-	f = open('simple_survey.results')
-	a = f.readlines()[0]
-	content = a.split('\t')
-	print "CONTENTS: " + str(len(content))
-
-
 def getNextArray():
 	try:
 		os.chdir(newPath)
@@ -99,7 +84,6 @@ def getNextArray():
 		max_t = t-1
 		return (-1, [])
 	getResults()
-	sanitizeInputs()
 	global n
 	n = readN()
 	dataStructure = []
