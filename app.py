@@ -47,7 +47,7 @@ def payment():
 		HIT_ID = int(utils.get_random_ID())
 		num_results = 5
 		session['num_results'] = num_results
-		os.system("python loadResults.py arg1 arg2 " + str(num_results) + " " + str(HIT_ID))
+		os.system("python mturk.py arg1 arg2 " + str(num_results) + " " + str(HIT_ID))
 		print HIT_ID
 		#Replace with call to 
 		if (timeVal == 0):
@@ -83,9 +83,15 @@ def payment():
 def results():
     if ('description' in session.keys() and 'option_1' in session.keys() and "option_2" in session.keys()):
     	currentResults = returnResults.main()
+    	session["currentResults"] = currentResults
+    	for x in session["currentResults"]: 
+    		print x
+    	queryResults = currentResults.get("0")
     	print "CURRENT RESULTS LENGTH"
     	print len(currentResults)
-    	session['data_array'] = utils.getFakeData()
+    	print "QUERY RESULTS LENGTH"
+    	print len(queryResults)
+    	session['data_array'] = utils.getTurkResults(queryResults)
     	arr = session['data_array']
     	if (session['added_DB'] == 0):
     		try:

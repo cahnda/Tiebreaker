@@ -21,8 +21,8 @@ def checkIfFinished():
 	fo = open('simple_survey.results')
 	a = fo.readlines()
 	lines = len(a)
-	print lines
-	print n+1
+	#print lines
+	#print n+1
 	return lines == n+1
 
 def getResults(): 
@@ -58,9 +58,9 @@ def getDataStructure():
 		if (item2 == ""):
 			item2 = "testResponse"
 		array_of_tuples.append((item1,item2))
-		print array_of_tuples[j]
+		#print array_of_tuples[j]
 		j = j + 1
-	print array_of_tuples
+	#print array_of_tuples
 	return array_of_tuples
 
 def readN():
@@ -88,7 +88,7 @@ def getNextArray():
 	n = readN()
 	dataStructure = []
 	if (checkIfFinished() == True):
-		print "TRUE"
+		#print "TRUE"
 		dataStructure = getDataStructure()
 		return (1, dataStructure)
 	else:
@@ -102,19 +102,18 @@ def resultsComponents():
 		newPath = path + "newDir" + str(t) +'/'
 		(newT, arr) = getNextArray()
 		if (newT == 1):
-			dictArrays[t] = arr
+			dictArrays[str(t)] = arr
 			t = t + 1
 		if (newT == 0):
 			t = t + 1
 		if (newT == -1):
 			t = -1
 			break;
-		print newT
-		print arr
+		#print newT
+		#print arr
 	return dictArrays
 
 def printDict(dictArrays):
-	print "REACHED"
 	x = 0
 	for (key, values) in dictArrays.items():
 		print "Key: " + str(key)
@@ -123,8 +122,9 @@ def printDict(dictArrays):
 
 
 def main():
+	print "REACHED"
 	dictArrays = resultsComponents()
 	printDict(dictArrays)
+	global t
+	t = 0
 	return dictArrays
-
-main()

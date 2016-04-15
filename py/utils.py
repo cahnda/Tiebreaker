@@ -21,6 +21,9 @@ def useTime():
 def getFakeData ():
 	return output.getFakeResults()
 
+def getTurkResults(inputData):
+	return output.getRealResults(inputData)
+
 def getActualData(arg1, arg2): 
 	tupleMatrix = os.system("python mturk.py arg1 arg2 50 1")
 	resultsMatrix = output.getResults(output.convert(tupleMatrix))

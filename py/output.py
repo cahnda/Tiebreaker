@@ -41,3 +41,18 @@ def convert(tupleMatrix):
 
 def getFakeResults():
 	return getResults(convert(sampleResults))
+
+def getRealResults(inputData):
+	return getResults(convert(preProcess(inputData)))
+
+def preProcess(inputData):
+	tupArr = []
+	for (a,b) in inputData:
+		print a
+		if (a == "\"This title rocks\""):
+			tupArr.append((1,b))
+		else:
+			tupArr.append((0,b))
+	return tupArr
+
+
