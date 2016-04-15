@@ -4,6 +4,7 @@
 from flask import Flask, render_template, request, redirect, session, url_for
 from py import *
 import getKeys, os, stripe, json, datetime, random
+import returnResults
 
 app = Flask(__name__)
 app.config.from_object('py.config')
@@ -37,16 +38,16 @@ def input():
 
 @app.route ("/payment",  methods = ["GET","POST"])
 def payment():
-	print ("here")
 	if (session['loaded_data'] == 0 and session['payment_accepted']):
 		#Implement Query Here
 		print ("start loading")
 		timeVal  = utils.useTime()
 		#session['data_array'] = utils.getActualData(session['option_1'],session['option_2'])
-		session['data_array'] = utils.getFakeData()
 		os.environ["JAVA_HOME"] = "/usr"
 		HIT_ID = int(utils.get_random_ID())
-		os.system("python mturk.py arg1 arg2 5 " + str(HIT_ID))
+		num_results = 5
+		session['num_results'] = num_results
+		os.system("python loadResults.py arg1 arg2 " + str(num_results) + " " + str(HIT_ID))
 		print HIT_ID
 		#Replace with call to 
 		if (timeVal == 0):
@@ -81,6 +82,10 @@ def payment():
 @app.route ("/results",  methods = ["GET","POST"])
 def results():
     if ('description' in session.keys() and 'option_1' in session.keys() and "option_2" in session.keys()):
+    	currentResults = returnResults.main()
+    	print "CURRENT RESULTS LENGTH"
+    	print len(currentResults)
+    	session['data_array'] = utils.getFakeData()
     	arr = session['data_array']
     	if (session['added_DB'] == 0):
     		try:

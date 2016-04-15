@@ -15,7 +15,7 @@ def tmp():
     print "placeholder"
 
 def useTime(): 
-	time.sleep(5)
+	time.sleep(10)
 	return 0
 
 def getFakeData ():
