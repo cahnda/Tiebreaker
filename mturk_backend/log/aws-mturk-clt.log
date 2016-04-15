@@ -4319,3 +4319,16 @@ Caused by: java.lang.IllegalArgumentException: Empty key
 	at com.amazonaws.mturk.service.axis.AWSService.setAccessKeyId(AWSService.java:124)
 	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:233)
 	... 4 more
+[2016-04-15 10:30:24] ERROR (AbstractCmd.java: 150) - An error occurred: Invalid configuration for port
+java.lang.RuntimeException: Invalid configuration for port
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:240)
+	at com.amazonaws.mturk.service.axis.RequesterService.<init>(RequesterService.java:241)
+	at com.amazonaws.mturk.cmd.AbstractCmd.initService(AbstractCmd.java:119)
+	at com.amazonaws.mturk.cmd.AbstractCmd.run(AbstractCmd.java:143)
+	at com.amazonaws.mturk.cmd.LoadHITs.main(LoadHITs.java:55)
+Caused by: java.lang.IllegalArgumentException: Empty key
+	at javax.crypto.spec.SecretKeySpec.<init>(SecretKeySpec.java:96)
+	at com.amazonaws.mturk.util.HMACSigner.<init>(HMACSigner.java:65)
+	at com.amazonaws.mturk.service.axis.AWSService.setAccessKeyId(AWSService.java:124)
+	at com.amazonaws.mturk.service.axis.RequesterServiceRaw.<init>(RequesterServiceRaw.java:233)
+	... 4 more

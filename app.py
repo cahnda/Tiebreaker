@@ -3,7 +3,7 @@
 
 from flask import Flask, render_template, request, redirect, session, url_for
 from py import *
-import getKeys, os, stripe, json, datetime
+import getKeys, os, stripe, json, datetime, random
 
 app = Flask(__name__)
 app.config.from_object('py.config')
@@ -45,7 +45,9 @@ def payment():
 		#session['data_array'] = utils.getActualData(session['option_1'],session['option_2'])
 		session['data_array'] = utils.getFakeData()
 		os.environ["JAVA_HOME"] = "/usr"
-		os.system("python mturk.py arg1 arg2 50 1")
+		HIT_ID = int(utils.get_random_ID())
+		os.system("python mturk.py arg1 arg2 5 " + str(HIT_ID))
+		print HIT_ID
 		#Replace with call to 
 		if (timeVal == 0):
 			print ("finished loading")
@@ -81,8 +83,16 @@ def results():
     if ('description' in session.keys() and 'option_1' in session.keys() and "option_2" in session.keys()):
     	arr = session['data_array']
     	if (session['added_DB'] == 0):
-    		utils.add_mongo_result(
+    		try:
+    			utils.add_mongo_result(
     			session["google_user_dict"]["id"],
+    			session["description"],
+    			session["option_1"],
+    			session["option_2"],
+    			arr)
+    		except:
+    			utils.add_mongo_result(
+    			"Anon",
     			session["description"],
     			session["option_1"],
     			session["option_2"],
@@ -114,6 +124,7 @@ def account():
 @app.route("/result=<result_id>", methods=["GET", "POST"])
 def showResult(result_id):
     if request.method == "GET":
+    	print ID
     	result = utils.get_mongo_result(result_id)
         data = result["html_data"]
         dsc = result["description"]

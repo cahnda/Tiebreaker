@@ -1,6 +1,7 @@
 #Functions that get called from App.py
 import pymongo, smtplib, datetime, getKeys, os, time
 from py import output
+import random
 from bson.objectid import ObjectId
 
 
@@ -40,3 +41,9 @@ def add_mongo_result (idNum, dscr, opt1, opt2, data):
 
 def get_mongo_result (result_id):
 	return resultList.find_one({"_id" : ObjectId(result_id)})
+
+def get_random_ID ():
+	x = random.seed()
+   	x = random.getstate()
+   	ID = random.random() * 1000000
+   	return ID
