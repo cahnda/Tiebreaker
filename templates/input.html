@@ -16,17 +16,17 @@
 <form method="POST" id="frm">
   <div class="input-group">
     <span class="input-group-addon" id="basic-addon1">Question Description</span>
-    <textarea type="textarea" name="description" value="" class= "form-control" aria-describedby="basic-addon1" placeholder="Which  is a better title, A or B?" ></textarea>  
+    <textarea type="textarea" name="description" value="" class= "form-control" aria-describedby="basic-addon1" placeholder="Which  is a better title, A or B?" >{{session['description']}}</textarea>  
   </div>
   <br>
   <div class="input-group">
     <span class="input-group-addon" id="basic-addon1">Option 1</span>
-    <textarea type="textarea" name="option1" value="" class= "form-control" aria-describedby="basic-addon2" placeholder="Title 1" ></textarea>
+    <textarea type="textarea" name="option1" value="" class= "form-control" aria-describedby="basic-addon2" placeholder="Title 1" >{{session['option_1']}}</textarea>
   </div>
   <br>
   <div class="input-group">
     <span class="input-group-addon" id="basic-addon1">Option 2</span>
-    <textarea type="textarea" name="option2" value="" class= "form-control" aria-describedby="basic-addon3" placeholder="Title 2" ></textarea>
+    <textarea type="textarea" name="option2" value="" class= "form-control" aria-describedby="basic-addon3" placeholder="Title 2" >{{session['option_2']}}</textarea>
   </div>
   <br>
   <input type="submit" name="button" value="Submit" class="btn btn-default btn-lg"> 
