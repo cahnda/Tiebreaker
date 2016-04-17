@@ -1,5 +1,8 @@
+# #Functions that get called from App.py
+# import pymongo, smtplib, datetime, getKeys, os, time
+import pymongo, smtplib, datetime, os, time
 #Functions that get called from App.py
-import pymongo, datetime, getKeys, os, time
+# import pymongo, datetime, getKeys, os, time
 from py import output
 import random
 from bson.objectid import ObjectId
@@ -7,7 +10,7 @@ from bson.objectid import ObjectId
 
 connection = pymongo.MongoClient ("ds019950.mlab.com", 19950)
 db = connection ["heroku_rfpkgm06"]
-db.authenticate("NETS213", getKeys.getMongo())
+# db.authenticate("NETS213", getKeys.getMongo())
 resultList = db.resultsDB
 
 def tmp():
