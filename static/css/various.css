@@ -1,0 +1,7 @@
+span.error{
+    color: red;
+    background-color: white;
+    padding: 10px;
+    font-size: 110%;
+    text-decoration: underline;
+}
