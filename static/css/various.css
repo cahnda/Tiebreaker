@@ -1,4 +1,4 @@
-span.error{
+div.error, span.error{
     color: red;
     background-color: white;
     padding: 10px;

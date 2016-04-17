@@ -101,6 +101,8 @@ def results():
         print "CURRENT RESULTS LENGTH"
         print len(currentResults)
         print "QUERY RESULTS LENGTH"
+        if not queryResults:
+            return render_template("index.html", error = "No query results.")
         print len(queryResults)
         session['data_array'] = utils.getTurkResults(queryResults)
         arr = session['data_array']
