@@ -18,6 +18,11 @@ env.globals.update(utils=utils)
 def index():
     return render_template("index.html")
 
+
+@app.route("/contact", methods = ["GET"])
+def contact():
+    return render_template("contact.html")
+
 @app.route ("/input",  methods = ["GET","POST"])
 def input():
     if request.method == "GET":
