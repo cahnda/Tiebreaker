@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 # #Functions that get called from App.py
 # import pymongo, smtplib, datetime, getKeys, os, time
 import pymongo, smtplib, datetime, os, time
-=======
 #Functions that get called from App.py
-import pymongo, datetime, getKeys, os, time
->>>>>>> 0553f29be13dbd2e534fc35eb286b6d12b5d2213
+# import pymongo, datetime, getKeys, os, time
 from py import output
 import random
 from bson.objectid import ObjectId
