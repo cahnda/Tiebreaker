@@ -92,19 +92,18 @@ def getNextArray():
 		dataStructure = getDataStructure()
 		return (1, dataStructure)
 	else:
-		return (0, [])
+		return (1, [])
 
 def resultsComponents():
 	dictArrays = {}
 	global t
 	while (t != -1):
+		print str(t) + " MY T VALUE"
 		global newPath
 		newPath = path + "newDir" + str(t) +'/'
 		(newT, arr) = getNextArray()
 		if (newT == 1):
 			dictArrays[str(t)] = arr
-			t = t + 1
-		if (newT == 0):
 			t = t + 1
 		if (newT == -1):
 			t = -1
