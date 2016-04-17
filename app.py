@@ -43,7 +43,9 @@ def input():
             if len(session['option_2']) == 0:
                 errString += "Please include a value for Option 2. "
             if len(errString) != 0:
-                return render_template('input.html', error=errString)
+                return render_template('input.html', description = session['description'], 
+                    option1 = session['option_1'], option2 = session['option_2'],
+                    error=errString)
             session['time_to_pay'] = 0;
             session['loaded_data'] = 0;
             session['payment_accepted'] = 0;
