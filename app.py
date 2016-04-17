@@ -45,6 +45,7 @@ def payment():
 		#session['data_array'] = utils.getActualData(session['option_1'],session['option_2'])
 		os.environ["JAVA_HOME"] = "/usr"
 		HIT_ID = int(utils.get_sequential_ID())
+		session["HIT_ID"] = HIT_ID
 		num_results = 5
 		arg1 = session['option_1']
 		arg2 = session['option_2']
@@ -88,7 +89,7 @@ def results():
     	session["currentResults"] = currentResults
     	for x in session["currentResults"]: 
     		print x
-    	queryResults = currentResults.get("0")
+    	queryResults = currentResults.get(str(session["HIT_ID"]))
     	print "CURRENT RESULTS LENGTH"
     	print len(currentResults)
     	print "QUERY RESULTS LENGTH"

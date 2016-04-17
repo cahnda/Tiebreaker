@@ -50,16 +50,19 @@ def getDataStructure():
 		i = i + 1
 	j = 0
 	while (j < n):
-		line = content[j+1].split("\t")
-		item1 = line[column1].rstrip('\n')
-		item2 = line[column2].rstrip('\n')
-		if (item1 == ""):
-			item1 = "testResponse"
-		if (item2 == ""):
-			item2 = "testResponse"
-		array_of_tuples.append((item1,item2))
-		#print array_of_tuples[j]
-		j = j + 1
+		try:
+			line = content[j+1].split("\t")
+			item1 = line[column1].rstrip('\n')
+			item2 = line[column2].rstrip('\n')
+			if (item1 == ""):
+				item1 = "testResponse"
+			if (item2 == ""):
+				item2 = "testResponse"
+			array_of_tuples.append((item1,item2))
+			#print array_of_tuples[j]
+			j = j + 1
+		except: 
+			break;
 	#print array_of_tuples
 	return array_of_tuples
 
@@ -92,7 +95,12 @@ def getNextArray():
 		dataStructure = getDataStructure()
 		return (1, dataStructure)
 	else:
-		return (1, [])
+		try: 
+			dataStructure = getDataStructure()
+			print "PARTIAL DATA STUCTURE"
+			return (1, dataStructure)
+		except: 
+			return (1, [])
 
 def resultsComponents():
 	dictArrays = {}

@@ -2,7 +2,9 @@
 = block title
 	Results
 = endblock
-
+= block head 
+<meta http-equiv="refresh" content="60">
+= endblock
 = block body
 	<script>
 		var arr = {{ arr | tojson | safe }}
