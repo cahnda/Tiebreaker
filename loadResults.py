@@ -19,7 +19,7 @@ t=int(sys.argv[4])
 print t
 
 print "hello world"
-startPath = '/Users/jackcahn/Desktop/mturk_backend/'
+startPath = '/Users/cahnda/Dropbox/Apps/Tiebreaker/mturk_backend/'
 path = startPath + 'samples/simple_survey/'
 newPath = path + "newDir" + str(t) +'/'
 binPath = startPath + '/bin/'

@@ -44,10 +44,12 @@ def payment():
 		timeVal  = utils.useTime()
 		#session['data_array'] = utils.getActualData(session['option_1'],session['option_2'])
 		os.environ["JAVA_HOME"] = "/usr"
-		HIT_ID = int(utils.get_random_ID())
+		HIT_ID = int(utils.get_sequential_ID())
 		num_results = 5
+		arg1 = session['option_1']
+		arg2 = session['option_2']
 		session['num_results'] = num_results
-		os.system("python mturk.py arg1 arg2 " + str(num_results) + " " + str(HIT_ID))
+		os.system("python loadResults.py \"" + arg1 + "\" \"" + arg2 + "\" " + str(num_results) + " " + str(HIT_ID))
 		print HIT_ID
 		#Replace with call to 
 		if (timeVal == 0):
