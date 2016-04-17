@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 # #Functions that get called from App.py
 # import pymongo, smtplib, datetime, getKeys, os, time
 import pymongo, smtplib, datetime, os, time
+=======
+#Functions that get called from App.py
+import pymongo, datetime, getKeys, os, time
+>>>>>>> 0553f29be13dbd2e534fc35eb286b6d12b5d2213
 from py import output
 import random
 from bson.objectid import ObjectId
@@ -10,7 +15,6 @@ connection = pymongo.MongoClient ("ds019950.mlab.com", 19950)
 db = connection ["heroku_rfpkgm06"]
 # db.authenticate("NETS213", getKeys.getMongo())
 resultList = db.resultsDB
-
 
 def tmp():
     print "placeholder"
@@ -51,3 +55,13 @@ def get_random_ID ():
    	x = random.getstate()
    	ID = random.random() * 1000000
    	return ID
+
+def get_sequential_ID():
+	file = open("id.txt","r")
+	txt = file.read()
+	file.close()
+	file = open("id.txt","w")
+	file.write(str(int(txt)+1))
+	file.close()
+	print txt
+	return int(txt)
