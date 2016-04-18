@@ -8,20 +8,14 @@ import random
 from shutil import copyfile
 
 question="Which title do you prefer?"
-a=str(sys.argv[1])
-print a
-b=str(sys.argv[2])
-print b
-#n=int(sys.argv[3])
 n = 5
-print n
-t=int(sys.argv[4])
-print t
+a = "Placeholder"
+b = "Placeholder"
+t = 6
 
-print "hello world"
+#print "hello world"
 startPath = '/Users/cahnda/Dropbox/Apps/Tiebreaker/mturk_backend/'
 path = startPath + 'samples/simple_survey/'
-newPath = path + "newDir" + str(t) +'/'
 binPath = startPath + '/bin/'
 
 def write():
@@ -66,10 +60,16 @@ def moveSuccess():
 		newPath + 'simple_survey.success')
 
 
-def runComponents(): 
+def runComponents(aI,bI,tI): 
+	global a 
+	a = aI
+	global b 
+	b = bI
+	global t
+	t = tI
+	global newPath
+	newPath = path + "newDir" + str(t) +'/'
 	write()
 	mkNewDirs()
 	run()
 	moveSuccess()
-
-runComponents()

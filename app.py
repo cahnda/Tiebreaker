@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from py import *
 import getKeys, os, stripe, json, datetime, random
 import os, stripe, json, datetime, random
-import returnResults
+import returnResults, loadResults
 
 app = Flask(__name__)
 app.config.from_object('py.config')
@@ -68,7 +68,7 @@ def payment():
 		arg1 = session['option_1']
 		arg2 = session['option_2']
 		session['num_results'] = num_results
-		os.system("python loadResults.py \"" + arg1 + "\" \"" + arg2 + "\" " + str(num_results) + " " + str(HIT_ID))
+		loadResults.runComponents(arg1,arg2, str(HIT_ID))
 		print HIT_ID
 		#Replace with call to 
 		if (timeVal == 0):
