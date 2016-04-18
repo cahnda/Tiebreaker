@@ -112,7 +112,7 @@ def results():
     	print len(currentResults)
     	print "QUERY RESULTS LENGTH"
     	print len(queryResults)
-    	session['data_array'] = utils.getTurkResults(queryResults)
+    	session['data_array'] = utils.getTurkResults(queryResults,session["option_1"],session["option_2"])
     	arr = session['data_array']
     	if (session['added_DB'] == 0):
     		try:

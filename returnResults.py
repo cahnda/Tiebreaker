@@ -55,9 +55,9 @@ def getDataStructure():
 			item1 = line[column1].rstrip('\n')
 			item2 = line[column2].rstrip('\n')
 			if (item1 == ""):
-				item1 = "testResponse"
+				item1 = "Placeholder"
 			if (item2 == ""):
-				item2 = "testResponse"
+				item2 = "Placeholder"
 			array_of_tuples.append((item1,item2))
 			#print array_of_tuples[j]
 			j = j + 1

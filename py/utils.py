@@ -1,8 +1,5 @@
-# #Functions that get called from App.py
-# import pymongo, smtplib, datetime, getKeys, os, time
-import pymongo, smtplib, datetime, os, time
 #Functions that get called from App.py
-# import pymongo, datetime, getKeys, os, time
+import pymongo, datetime, getKeys, os, time
 from py import output
 import random
 from bson.objectid import ObjectId
@@ -10,8 +7,9 @@ from bson.objectid import ObjectId
 
 connection = pymongo.MongoClient ("ds019950.mlab.com", 19950)
 db = connection ["heroku_rfpkgm06"]
-# db.authenticate("NETS213", getKeys.getMongo())
+db.authenticate("NETS213", getKeys.getMongo())
 resultList = db.resultsDB
+count = db.count
 
 def tmp():
     print "placeholder"
@@ -23,8 +21,8 @@ def useTime():
 def getFakeData ():
 	return output.getFakeResults()
 
-def getTurkResults(inputData):
-	return output.getRealResults(inputData)
+def getTurkResults(inputData,input1,input2):
+	return output.getRealResults(inputData,input1,input2)
 
 def getActualData(arg1, arg2): 
 	tupleMatrix = os.system("python mturk.py arg1 arg2 50 1")
@@ -54,11 +52,9 @@ def get_random_ID ():
    	return ID
 
 def get_sequential_ID():
-	file = open("id.txt","r")
-	txt = file.read()
-	file.close()
-	file = open("id.txt","w")
-	file.write(str(int(txt)+1))
-	file.close()
+	doc = count.find_one({"_id" : ObjectId("57142510e4b065a8c4d72ab9")})
+	txt = doc["value"]
+	count.update({"_id" : ObjectId("57142510e4b065a8c4d72ab9")},{"value":txt +1})
+	count.update
 	print txt
-	return int(txt)
+	return txt

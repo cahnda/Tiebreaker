@@ -42,17 +42,17 @@ def convert(tupleMatrix):
 def getFakeResults():
 	return getResults(convert(sampleResults))
 
-def getRealResults(inputData):
-	return getResults(convert(preProcess(inputData)))
+def getRealResults(inputData,input1,input2):
+	return getResults(convert(preProcess(inputData,input1,input2)))
 
-def preProcess(inputData):
+def preProcess(inputData,option1,option2):
 	tupArr = []
 	for (a,b) in inputData:
 		print a
-		if (a == "\"This title rocks\""):
-			tupArr.append((1,b))
-		else:
+		if (a == "\"" + option1 + "\""):
 			tupArr.append((0,b))
+		if (a == "\"" + option2 + "\""):
+			tupArr.append((1,b))
 	return tupArr
 
 
