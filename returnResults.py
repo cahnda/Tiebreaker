@@ -102,9 +102,8 @@ def getNextArray():
 
 def resultsComponents():
 	dictArrays = {}
+	global t
 	while (t != -1):
-		global t
-		print t
 		print str(t) + " MY T VALUE"
 		global newPath
 		newPath = path + "newDir" + str(t) +'/'
