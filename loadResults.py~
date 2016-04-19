@@ -15,7 +15,7 @@ t = 6
 
 #print "hello world"
 cwdPath = os.getcwd()
-startPath = cwdPath + '/mturk_backend/'
+startPath = cwdPath + 'mturk_backend/'
 print(startPath)
 path = startPath + 'samples/simple_survey/'
 binPath = startPath + '/bin/'

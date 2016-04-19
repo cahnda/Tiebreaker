@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import sys
 import os
 import subprocess
@@ -9,6 +11,7 @@ t = 0
 n = 0
 max_t = 0
 
+cwdPath = 
 startPath = '/Users/cahnda/Dropbox/Apps/Tiebreaker/mturk_backend/'
 path = startPath + 'samples/simple_survey/'
 newPath = path + "newDir" + str(t) +'/'
