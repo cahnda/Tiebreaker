@@ -9,7 +9,8 @@ t = 0
 n = 0
 max_t = 0
 
-startPath = '/Users/cahnda/Dropbox/Apps/Tiebreaker/mturk_backend/'
+cwdPath = os.getcwd()
+startPath = cwdPath + '/mturk_backend/'
 path = startPath + 'samples/simple_survey/'
 newPath = path + "newDir" + str(t) +'/'
 binPath = startPath + '/bin/'
