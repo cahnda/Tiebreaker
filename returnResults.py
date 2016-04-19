@@ -102,7 +102,6 @@ def getNextArray():
 
 def resultsComponents():
 	dictArrays = {}
-	global t
 	while (t != -1):
 		print str(t) + " MY T VALUE"
 		global newPath
