@@ -54,7 +54,7 @@ def get_random_ID ():
 def get_sequential_ID():
 	doc = count.find_one({"_id" : ObjectId("57142510e4b065a8c4d72ab9")})
 	txt = doc["value"]
-	count.update({"_id" : ObjectId("57142510e4b065a8c4d72ab9")},{"value":txt +1})
-	count.update
+	#count.update({"_id" : ObjectId("57142510e4b065a8c4d72ab9")},{"value":txt +1})
+	#count.update
 	print txt
 	return txt
