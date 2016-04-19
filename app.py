@@ -107,11 +107,14 @@ def results():
     	session["currentResults"] = currentResults
     	for x in session["currentResults"]: 
     		print x
-    	queryResults = currentResults.get(str(session["HIT_ID"]))
-    	print "CURRENT RESULTS LENGTH"
-    	print len(currentResults)
-    	print "QUERY RESULTS LENGTH"
-    	print len(queryResults)
+        try: 
+        	queryResults = currentResults.get()
+        	print "CURRENT RESULTS LENGTH"
+        	print len(currentResults)
+        	print "QUERY RESULTS LENGTH"
+        	print len(queryResults)
+        except:
+            print str(session["HIT_ID"]) + "NOT IN SESSION"
     	session['data_array'] = utils.getTurkResults(queryResults,session["option_1"],session["option_2"])
     	arr = session['data_array']
     	if (session['added_DB'] == 0):
