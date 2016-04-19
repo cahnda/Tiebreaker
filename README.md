@@ -1,5 +1,26 @@
 # TIEBREAKER: DEMOCRATIZING A/B TESTING
 
+## Instuctions for NETS 213 Teaching Team
+Our "working prototype" is a fully-functional finished product of the Tiebreaker website. Due to the complexity of the web application, we are currently running Tiebreaker off of our local machines. As we proceed to the final step in the project, we will work toward hosting the website at a publicly accessible URL. In the meantime, we have included instructions for running Tiebreaker on your local machine below: 
+
+**Step 1: Loading the App**
+
+1. **Import system Requirments:** Pip install the requirements in requirements.txt. Make sure that you have the most recent version of Java (this is critical).
+2. **Get the Secret Key:** Email cahnja@wharton.upenn.edu and request the most recent API Secret Key. We cannot post this key on Github due to security concerns. Once you have the secret key, go into the folder mturk_backend/bin and open the file mturk.properties. Copy and paste (no quotes needed, just directly copy and paste) the secret key and access key into the indicated spots. Now the AWS connection should work for you.
+3. **Run the App:** Go into your terminal to the cloned repository. Run "python app.py". Load: http://127.0.0.1:5000/ in your URL bar. 
+
+**Step 2: Using the App**
+
+1. **Login:** Use the login button. 
+2. **Create a Hit:** Click Get Started. Type in your Question and 2 choices. For now use the question "Which title do you like better?" which we've hard coded in for the time being. Make up two titles of your choosing.
+3. **Pay for the Hit:** Use 4242 4242 4242 4242 as the credit card number for now (we don't want to make you pay). You can make up the expiration date and pin number.
+4. **Complete the Hit:** Complete ALL of the hits at link: "https://workersandbox.mturk.com/mturk/preview?groupId=3UY3BQX0VVC59LPG46Y13TOMDQG02Z" to get the results back (there should not be many). Refresh the results page and you'll see your results. 
+5. **Load the Results:** The results should load on the results page.
+
+We have robustly tested the app on the production site. There, we get 50 results instead of just 1 result and use the responses to the gold standard question (which are now just "this title rocks" and "this title sucks") to do initial quality control. Full details on the app are below.
+
+If you have any problems, we are happy to answer any questions at cahnja@wharton.upenn.edu. If you have any issues downloading the system requirments, we are happy to demo the prototype on our local machines. By the final step of this assignment, we should have the site hosted online, so downloading system requirements will not be an issue.
+
 
 ## Overview
 
@@ -77,5 +98,4 @@ The BrainStormIt component is a reach goal which we are currently implementing. 
 #### Sub-Component 2: Experimentation / Research (2)
 
 The Experimentation portion involves a battery of tests we will run to evaluate how effective crowd-workers are compared with an expert control group.
-
 
