@@ -14,7 +14,9 @@ b = "Placeholder"
 t = 6
 
 #print "hello world"
-startPath = '/Users/cahnda/Dropbox/Apps/Tiebreaker/mturk_backend/'
+cwdPath = os.getcwd()
+startPath = cwdPath + '/mturk_backend/'
+print(startPath)
 path = startPath + 'samples/simple_survey/'
 binPath = startPath + '/bin/'
 
