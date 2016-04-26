@@ -13,6 +13,8 @@ app.config.from_object('py.config')
 env = app.jinja_env
 env.line_statement_prefix = '='
 env.globals.update(utils=utils)
+global ON 
+ON = True
 
 @app.route("/", methods = ["GET","POST"])
 def index():
@@ -50,6 +52,8 @@ def input():
             session['loaded_data'] = 0;
             session['payment_accepted'] = 0;
             session['added_DB'] = 0
+            global ON
+            ON = True
             return redirect('/payment')
     return render_template("input.html")
 
@@ -64,7 +68,7 @@ def payment():
 		os.environ["JAVA_HOME"] = "/usr"
 		HIT_ID = int(utils.get_sequential_ID())
 		session["HIT_ID"] = HIT_ID
-		num_results = 5
+		num_results = 1
 		arg1 = session['option_1']
 		arg2 = session['option_2']
 		session['num_results'] = num_results
@@ -102,8 +106,12 @@ def payment():
 
 @app.route ("/results",  methods = ["GET","POST"])
 def results():
-    if ('description' in session.keys() and 'option_1' in session.keys() and "option_2" in session.keys()):
-    	currentResults = returnResults.main()
+    if ('description' in session.keys() and 'option_1' in session.keys() and "option_2" in session.keys() and session["payment_accepted"] == 1):
+    	print ("payment accepted")
+        print ("added" + str(session['added_DB']))
+        global ON
+        print (ON)
+        currentResults = returnResults.main()
     	session["currentResults"] = currentResults
     	for x in session["currentResults"]: 
     		print x
@@ -114,22 +122,30 @@ def results():
         print len(queryResults)        
     	session['data_array'] = utils.getTurkResults(queryResults,session["option_1"],session["option_2"])
     	arr = session['data_array']
-    	if (session['added_DB'] == 0):
-    		try:
-    			utils.add_mongo_result(
-    			session["google_user_dict"]["id"],
-    			session["description"],
-    			session["option_1"],
-    			session["option_2"],
-    			arr)
-    		except:
-    			utils.add_mongo_result(
-    			"Anon",
-    			session["description"],
-    			session["option_1"],
-    			session["option_2"],
-    			arr)
-    		session['added_DB'] = 1
+        print ("ADDING TO DB")
+        print (len(queryResults))
+        print (session['num_results'])
+        print (session['added_DB'])
+        print queryResults[0][0]
+        print (session['added_DB'] == 0 and len(queryResults) == session['num_results'] and not (queryResults[0][0] == "Placeholder"))
+    	if (ON and len(queryResults) == session['num_results'] and not (queryResults[0][0] == "Placeholder")):
+            ON = False
+            print ("added" + str(session['added_DB']))
+            print ("ACTUALLY UPDATING")
+            try:
+                utils.add_mongo_result(
+                session["google_user_dict"]["id"],
+                session["description"],
+                session["option_1"],
+                session["option_2"],
+                arr)
+            except:
+                utils.add_mongo_result(
+                "Anon",
+                session["description"],
+                session["option_1"],
+                session["option_2"],
+                arr)
     	return render_template(
     		"results.html",
     		dscr=session["description"],
@@ -147,6 +163,7 @@ def account():
     if "google_user_dict" in session:
         myName = session["google_user_dict"]["displayName"]
         myID = session["google_user_dict"]["id"]
+        print (myID)
         results = sorted(utils.get_my_results(myID), 
             key=lambda x: datetime.datetime.strptime(x['time'], "%Y-%m-%d %H:%M:%S"))
         return render_template("account.html",name=myName,allResults=results)
@@ -156,7 +173,6 @@ def account():
 @app.route("/result=<result_id>", methods=["GET", "POST"])
 def showResult(result_id):
     if request.method == "GET":
-        print ID
         result = utils.get_mongo_result(result_id)
         data = result["html_data"]
         dsc = result["description"]
