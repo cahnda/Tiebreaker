@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from py import *
 import getKeys, os, stripe, json, datetime, random
 import os, stripe, json, datetime, random
-import returnResults, loadResults
+import returnResults, loadResults, loadBrainstormit
 
 app = Flask(__name__)
 app.config.from_object('py.config')
@@ -33,7 +33,8 @@ def input():
         print("post request")
         button = request.form['button'] if 'button' in request.form else None
         print (button)
-        if button == "Submit":
+        if button == "Brainstorm" or button == "Tiebreak":
+            session['task'] = button
             session['description'] = request.form.get("description", None)
             session['option_1'] = request.form.get("option1", None)
             session['option_2'] = request.form.get("option2", None)
@@ -60,75 +61,79 @@ def input():
 
 @app.route ("/payment",  methods = ["GET","POST"])
 def payment():
-	if (session['loaded_data'] == 0 and session['payment_accepted']):
-		#Implement Query Here
-		print ("start loading")
-		timeVal  = utils.useTime()
-		#session['data_array'] = utils.getActualData(session['option_1'],session['option_2'])
-		os.environ["JAVA_HOME"] = "/usr"
-		HIT_ID = int(utils.get_sequential_ID())
-		session["HIT_ID"] = HIT_ID
-		num_results = 1
-		arg1 = session['option_1']
-		arg2 = session['option_2']
-		session['num_results'] = num_results
-		loadResults.runComponents(arg1,arg2, str(HIT_ID))
-		print HIT_ID
-		#Replace with call to 
-		if (timeVal == 0):
-			print ("finished loading")
-			session['loaded_data'] = 1
-			return redirect('/results')
-	if not('time_to_pay' in session and session['time_to_pay'] == 0):
-		return redirect("input")
-	if (session['payment_accepted'] == 0): 
-		if not request.method == "GET":
-			# Set your secret key: remember to change this to your live secret key in production
-			# See your keys here https://dashboard.stripe.com/account/apikeys
-			stripe.api_key = getKeys.stripePrivate()
-			# Get the credit card details submitted by the form
-			token = request.form['stripeToken'] if 'stripeToken' in request.form else None
+    if (session['loaded_data'] == 0 and session['payment_accepted']):
+        #Implement Query Here
+        print ("start loading")
+        timeVal  = utils.useTime()
+        #session['data_array'] = utils.getActualData(session['option_1'],session['option_2'])
+        os.environ["JAVA_HOME"] = "/usr"
+        HIT_ID = int(utils.get_sequential_ID())
+        session["HIT_ID"] = HIT_ID
+        num_results = 1
+        arg1 = session['option_1']
+        arg2 = session['option_2']
+        dscr = session['description']
+        session['num_results'] = num_results
+        if (session['task'] == "Tiebreak"):
+            loadResults.runComponents(arg1,arg2, str(HIT_ID))
+        else: 
+            loadBrainstormit.runComponents(dscr,str(HIT_ID))
+        print HIT_ID
+        #Replace with call to 
+        if (timeVal == 0):
+            print ("finished loading")
+            session['loaded_data'] = 1
+            return redirect('/results')
+    if not('time_to_pay' in session and session['time_to_pay'] == 0):
+        return redirect("input")
+    if (session['payment_accepted'] == 0): 
+        if not request.method == "GET":
+            # Set your secret key: remember to change this to your live secret key in production
+            # See your keys here https://dashboard.stripe.com/account/apikeys
+            stripe.api_key = getKeys.stripePrivate()
+            # Get the credit card details submitted by the form
+            token = request.form['stripeToken'] if 'stripeToken' in request.form else None
 
-			# Create the charge on Stripe's servers - this will charge the user's card
-			try:
-				charge = stripe.Charge.create (
-			    	amount=500, # amount in cents, again
-			    	currency="usd",
-			      	source=token,
-			      	description="Payment"
-			  		  )
-			  	session['payment_accepted'] = 1;
-			  	session['time_to_pay'] = 1;
- 			except stripe.error.CardError, e:
-				session['payment_accepted'] = -1;
-			return render_template("payment.html", status=session['payment_accepted'])
-	return render_template("payment.html", status=session['payment_accepted'])
+            # Create the charge on Stripe's servers - this will charge the user's card
+            try:
+                charge = stripe.Charge.create (
+                    amount=500, # amount in cents, again
+                    currency="usd",
+                    source=token,
+                    description="Payment"
+                      )
+                session['payment_accepted'] = 1;
+                session['time_to_pay'] = 1;
+            except stripe.error.CardError, e:
+                session['payment_accepted'] = -1;
+            return render_template("payment.html", status=session['payment_accepted'])
+    return render_template("payment.html", status=session['payment_accepted'])
 
 @app.route ("/results",  methods = ["GET","POST"])
 def results():
     if ('description' in session.keys() and 'option_1' in session.keys() and "option_2" in session.keys() and session["payment_accepted"] == 1):
-    	print ("payment accepted")
+        print ("payment accepted")
         print ("added" + str(session['added_DB']))
         global ON
         print (ON)
         currentResults = returnResults.main()
-    	session["currentResults"] = currentResults
-    	for x in session["currentResults"]: 
-    		print x
+        session["currentResults"] = currentResults
+        for x in session["currentResults"]: 
+            print x
         queryResults = currentResults.get(str(session["HIT_ID"]))
         print "CURRENT RESULTS LENGTH"
         print len(currentResults)
         print "QUERY RESULTS LENGTH"
         print len(queryResults)        
-    	session['data_array'] = utils.getTurkResults(queryResults,session["option_1"],session["option_2"])
-    	arr = session['data_array']
+        session['data_array'] = utils.getTurkResults(queryResults,session["option_1"],session["option_2"])
+        arr = session['data_array']
         print ("ADDING TO DB")
         print (len(queryResults))
         print (session['num_results'])
         print (session['added_DB'])
         print queryResults[0][0]
         print (session['added_DB'] == 0 and len(queryResults) == session['num_results'] and not (queryResults[0][0] == "Placeholder"))
-    	if (ON and len(queryResults) == session['num_results'] and not (queryResults[0][0] == "Placeholder")):
+        if (ON and len(queryResults) == session['num_results'] and not (queryResults[0][0] == "Placeholder")):
             ON = False
             print ("added" + str(session['added_DB']))
             print ("ACTUALLY UPDATING")
@@ -146,13 +151,13 @@ def results():
                 session["option_1"],
                 session["option_2"],
                 arr)
-    	return render_template(
-    		"results.html",
-    		dscr=session["description"],
-    		optn1=session["option_1"],
-    		optn2=session["option_2"],
-    		arr=arr
-    		)
+        return render_template(
+            "results.html",
+            dscr=session["description"],
+            optn1=session["option_1"],
+            optn2=session["option_2"],
+            arr=arr
+            )
     else:
         return redirect('/')
     return render_template("results.html")

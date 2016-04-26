@@ -7,14 +7,12 @@ import time
 import random
 from shutil import copyfile
 
-question=str(sys.argv[1])
-t=int(sys.argv[2])
-
-print "hello world"
+question = ""
+t = 6
+newPath = ""
 cwdPath = os.getcwd()
 startPath = cwdPath + '/mturk_backend_brainstormit/'
 path = startPath + 'samples/simple_survey/'
-newPath = path + "newDir" + str(t) +'/'
 binPath = startPath + '/bin/'
 n = 10
 
@@ -22,6 +20,7 @@ def write():
     print('Creating new text file') 
     os.chdir(path)
     fo = open('simple_survey.input', 'w+', 0)
+    global quesiton
     fo.write('question' + '\t' + 'assignments' + '\n' + question + '\t' + str(n))
     fo.close() 
 
@@ -49,10 +48,15 @@ def moveSuccess():
 		newPath + 'simple_survey.success')
 
 
-def runComponents(): 
+def runComponents(qI,tI): 
+	global question
+	question = qI
+	global t
+	t = tI
+	global newPath
+	newPath = path + "newDir" + str(t) +'/'
 	write()
 	mkNewDirs()
 	run()
 	moveSuccess()
 
-runComponents()
