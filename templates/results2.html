@@ -1,0 +1,24 @@
+= extends 'layout.html'
+= block title
+	Results
+= endblock
+= block head 
+<meta http-equiv="refresh" content="60">
+= endblock
+= block body
+	<script>
+		var arr = {{ arr | tojson | safe }}
+	</script>
+
+<div class="page-message">
+<h1>{{dscr}}</h1>
+<h3>Your Brainstorm Ideas Are: </h3>
+<hr class="intro-divider">
+</div>
+<div>
+	= for val in arr
+		<li style="color:white"> <h3> {{val}} </h3> </li> 
+	= endfor
+</div>
+
+= endblock

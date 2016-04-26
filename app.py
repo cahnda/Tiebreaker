@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from py import *
 import getKeys, os, stripe, json, datetime, random
 import os, stripe, json, datetime, random
-import returnResults, loadResults, loadBrainstormit
+import returnResults, loadResults, loadBrainstormit, returnBrainstorms
 
 app = Flask(__name__)
 app.config.from_object('py.config')
@@ -77,7 +77,7 @@ def payment():
         if (session['task'] == "Tiebreak"):
             loadResults.runComponents(arg1,arg2, str(HIT_ID))
         else: 
-            loadBrainstormit.runComponents(dscr,str(HIT_ID))
+            loadBrainstormit.runComponents(dscr,str(2))
         print HIT_ID
         #Replace with call to 
         if (timeVal == 0):
@@ -111,7 +111,7 @@ def payment():
 
 @app.route ("/results",  methods = ["GET","POST"])
 def results():
-    if ('description' in session.keys() and 'option_1' in session.keys() and "option_2" in session.keys() and session["payment_accepted"] == 1):
+    if ('description' in session.keys() and 'option_1' in session.keys() and "option_2" in session.keys() and session["payment_accepted"] == 1 and session['task'] == "Tiebreak"):
         print ("payment accepted")
         print ("added" + str(session['added_DB']))
         global ON
@@ -159,7 +159,22 @@ def results():
             arr=arr
             )
     else:
-        return redirect('/')
+        if ('description' in session.keys() and session["payment_accepted"] == 1 and session['task'] == "Brainstorm"):
+            print "BRAINSTORMING"
+            results = returnBrainstorms.main()
+            for x in results:
+                print x
+            try: 
+                queryResults = results.get(str(2))
+                print len(queryResults)
+            except:
+                queryResults = []
+                print "FAIL"
+            for x in queryResults:
+                print x
+            return render_template("results2.html",dscr=session["description"],arr=queryResults)
+        else: 
+            return redirect('/')
     return render_template("results.html")
 
 

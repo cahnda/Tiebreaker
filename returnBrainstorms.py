@@ -26,6 +26,7 @@ def checkIfFinished():
 
 def getResults(): 
 	os.chdir(binPath)
+	print ("GETTING RESULTS FOR T=" + str(t))
 	executable = "./getResults.sh $1 $2 $3 $4 $5 $6 $7 $8 $9 -successfile ../samples/simple_survey/newDir" + str(t) + '/' + "simple_survey.success -outputfile ../samples/simple_survey/newDir" + str(t) + '/' + "simple_survey.results"
 	print (executable)
 	os.system(executable)
@@ -54,9 +55,8 @@ def getDataStructure():
 		print "REACHED"
 		print j
 		print len(array_of_tuples)
-		line = content[j+1].split("\t")
-		
 		try: 
+			line = content[j+1].split("\t")
 			item1 = line[column1].rstrip('\n')
 			print item1
 			item2 = line[column2].rstrip('\n')
@@ -67,9 +67,8 @@ def getDataStructure():
 			array_of_tuples.append(item2)
 			array_of_tuples.append(item3)
 			j = j + 1
-
 		except: 
-			j = j+1
+			break
 
 		if (item1 == ""):
 			item1 = "Placeholder"
@@ -97,25 +96,49 @@ def readN():
 def getNextArray():
 	try:
 		os.chdir(newPath)
+		print "found path"
 	except OSError: 
+		print "didn't find path"
 		global max_t
 		max_t = t-1
 		return (-1, [])
-	#getResults()
+	getResults()
 	global n
 	n = readN()
 	dataStructure = []
 	if (checkIfFinished() == True):
-		print "TRUE"
+		#print "TRUE"
 		dataStructure = getDataStructure()
 		return (1, dataStructure)
 	else:
+		try: 
+			dataStructure = getDataStructure()
+			print "PARTIAL DATA STUCTURE"
+			return (1, dataStructure)
+		except: 
+			return (1, [])
+	#if (checkIfFinished() == True):
+	#try:
+	#	print "TRUE"
+	#	dataStructure = getDataStructure()
+	#	return (1, dataStructure)
+	#except:
+	#	dataStructure = getDataStructure()
+	#	return (1, dataStructure)
+	#else:
 	#	try: 
 	#		dataStructure = getDataStructure()
 	#		print "PARTIAL DATA STUCTURE"
 	#		return (1, dataStructure)
 	#	except: 
-		return (-1, [])
+	#	return (-1, [])
+
+	#try: 
+	#	dataStructure = getDataStructure()
+	#	print "PARTIAL DATA STUCTURE"
+	#	return (1, dataStructure)		
+	#except: 
+	#	return (-1, [])
 
 def resultsComponents():
 	dictArrays = {}
@@ -149,5 +172,3 @@ def main():
 	global t
 	t = 0
 	return dictArrays
-
-main()
