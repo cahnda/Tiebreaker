@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from py import *
 import getKeys, os, stripe, json, datetime, random
 import os, stripe, json, datetime, random
-import returnResults, loadResults, loadBrainstormit, returnBrainstorms, returnResultsG2
+import loadResults, loadBrainstormit, returnBrainstorms, returnResultsG2
 
 app = Flask(__name__)
 app.config.from_object('py.config')
@@ -38,17 +38,6 @@ def input():
             session['description'] = request.form.get("description", None)
             session['option_1'] = request.form.get("option1", None)
             session['option_2'] = request.form.get("option2", None)
-            errString = ""
-            if len(session['description']) == 0:
-                errString += "Please include a description. "
-            if len(session['option_1']) == 0:
-                errString += "Please include a value for Option 1. "
-            if len(session['option_2']) == 0:
-                errString += "Please include a value for Option 2. "
-            if len(errString) != 0:
-                return render_template('input.html', description = session['description'], 
-                    option1 = session['option_1'], option2 = session['option_2'],
-                    error=errString)
             session['time_to_pay'] = 0;
             session['loaded_data'] = 0;
             session['payment_accepted'] = 0;
