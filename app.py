@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from py import *
 import getKeys, os, stripe, json, datetime, random
 import os, stripe, json, datetime, random
-import returnResults, loadResults, loadBrainstormit, returnBrainstorms
+import returnResults, loadResults, loadBrainstormit, returnBrainstorms, returnResultsG2
 
 app = Flask(__name__)
 app.config.from_object('py.config')
@@ -32,7 +32,7 @@ def input():
     else: 
         print("post request")
         button = request.form['button'] if 'button' in request.form else None
-        print (button)
+        #print (button)
         if button == "Brainstorm" or button == "Tiebreak":
             session['task'] = button
             session['description'] = request.form.get("description", None)
@@ -116,7 +116,7 @@ def results():
         print ("added" + str(session['added_DB']))
         global ON
         print (ON)
-        currentResults = returnResults.main()
+        currentResults = returnResultsG2.main()
         session["currentResults"] = currentResults
         for x in session["currentResults"]: 
             print x

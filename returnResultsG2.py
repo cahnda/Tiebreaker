@@ -50,30 +50,36 @@ def getDataStructure():
 			column3 = i
 		i = i + 1
 	j = 0
-	while (len(array_of_tuples) <= n):
-		print "REACHED"
-		line = content[j+1].split("\t")
+	try: 
+		while (len(array_of_tuples) < n):
+			print "REACHED"
+			line = content[j+1].split("\t")
 		
-		try: 
 			item1 = line[column1].rstrip('\n')
 			print item1
 			item2 = line[column2].rstrip('\n')
 			print item2
 			item3 = line[column3].rstrip('\n')
 			print item3
-			array_of_tuples.append((item1,item2))
+			print len(item3)
+			if (item3 == '"0"'):
+				array_of_tuples.append((item1,item2))
+			else: 
+				array_of_tuples.append(("Placeholder","Placeholder"))
 			j = j + 1
-
-		except: 
-			j = j+1
 
 		if (item1 == ""):
 			item1 = "Placeholder"
 		if (item2 == ""):
 			item2 = "Placeholder"
 
-	print array_of_tuples
-	return array_of_tuples
+		print array_of_tuples
+		return array_of_tuples
+
+	except: 
+		#j = j+1
+		print array_of_tuples
+		return array_of_tuples
 
 def readN():
 	os.chdir(newPath)
@@ -145,5 +151,3 @@ def main():
 	global t
 	t = 0
 	return dictArrays
-
-main()

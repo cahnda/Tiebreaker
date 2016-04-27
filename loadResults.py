@@ -24,7 +24,7 @@ def write():
     print('Creating new text file') 
     os.chdir(path)
     fo = open('simple_survey.input', 'w+', 0)
-    fo.write('question' + '\t' + 'choice1' + '\t' + 'choice2' + '\t' + 'goldStandard1' + '\t' + 'goldStandard2' + '\t' + 'assignments' + '\n' + question + '\t' + a + '\t' + b + '\t' + getGoldStandard()[0] + '\t' + getGoldStandard()[1] + '\t' + str(n))
+    fo.write('question' + '\t' + 'choice1' + '\t' + 'choice2' + '\t' + 'goldStandard1' + '\t' + 'goldStandard2' + '\t' + 'assignments' + '\n' + question + '\t' + a + '\t' + b + '\t' + getGoldStandard()[0] + '\t' + getGoldStandard()[1] + '\t' + str(n*2))
 
     fo.close() 
 

@@ -199,11 +199,11 @@
         <StyleSuggestion>radiobutton</StyleSuggestion>
         <Selections>
           <Selection>
-            <SelectionIdentifier>${goldStandard1}</SelectionIdentifier>
+            <SelectionIdentifier>0</SelectionIdentifier>
             <Text>${goldStandard1}</Text>
           </Selection>
           <Selection>
-            <SelectionIdentifier>${goldStandard2}</SelectionIdentifier>
+            <SelectionIdentifier>1</SelectionIdentifier>
             <Text>${goldStandard2}</Text>
           </Selection>
         </Selections>
